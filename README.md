@@ -19,7 +19,8 @@ Ten of the gates cannot be answered from source, so the skill renders the page w
 ## eod
 
 Writes the owner's end-of-day report from whatever he dictated, in his format: a dated line, one main-outcome paragraph, then up to four priority bullets in priority order.
-It is built against one specimen, his own EOD for 30 July 2026, which is the authority on format, tone, length and punctuation; the derived rules carry IDs so a violation can be named.
+It is built against a corpus of three of his own EODs, from 28, 29 and 30 July 2026, which together are the authority on format, tone, length and punctuation; every derived rule carries an ID and names which of the three support it.
+What the three do differently is his to vary and is never normalised: the greeting, the punctuation around the date, where the blank lines fall, how many bullets, which separator follows a workstream name, and how he capitalises his own project names from one sentence to the next.
 The rule that outranks the rest: it assembles and orders, it does not re-word. The roughness in dictated speech is the voice, so a sentence that comes out grammatically better than it went in is a defect.
 Dictation is the primary mode and works with nothing else available. On request it will read the day's commits and merged pull requests to fill gaps, but found work is offered to him rather than written into a bullet, and it never pads to four.
 
@@ -44,8 +45,8 @@ Copy `voice.template.md` into the root of a project as `voice.md` and fill it in
 Without it the skills still run on the global catalog alone, and they say so in their output; `design-review` reports gate `X1` as skipped, since it has nothing to check the visual language against.
 
 `eod` does not read `voice.md`.
-A `voice.md` scopes one project's outward copy, and an EOD is neither outward copy nor scoped to one project: the specimen alone covers four.
-Its authority is `eod/references/specimen.md`, which is the owner's own writing rather than a project's.
+A `voice.md` scopes one project's outward copy, and an EOD is neither outward copy nor scoped to one project: one day of the corpus alone covers four.
+Its authority is `eod/references/corpus.md`, three of the owner's own EODs, which is his writing rather than a project's.
 
 ## Attribution
 

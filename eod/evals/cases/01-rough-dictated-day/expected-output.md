@@ -1,6 +1,6 @@
 # Case 01 - expected output
 
-The correct answer for this case already exists: it is `references/specimen.md`, written by the owner from the same day.
+The correct answer for this case already exists: it is specimen A in `references/corpus.md`, written by the owner from the same day.
 
 This case grades **phrasing fidelity**.
 The input notes are already in his words, so a correct run reproduces those words.

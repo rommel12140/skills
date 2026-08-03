@@ -13,9 +13,18 @@ description: >
 This skill writes one person's end-of-day report.
 It is not a general standup or status-report generator, and it should not be adapted into one.
 
-`references/specimen.md` holds his own EOD for 30 July 2026 and is the authority on format, tone, length and punctuation.
-`references/voice-rules.md` holds the rules derived from it, each with an ID.
-Read the specimen before applying any rule. When the two disagree, the specimen wins.
+`references/corpus.md` holds three of his own EODs, from 28, 29 and 30 July 2026, and is the authority on format, tone, length and punctuation.
+`references/voice-rules.md` holds the rules derived from them, each with an ID and a line naming which specimens support it.
+Read the corpus before applying any rule. When a rule and a specimen disagree, the specimen wins and the rule is wrong.
+
+## Read all three, not one
+
+The three days differ in ways that matter, and most of what a single day would teach you to enforce turns out to be his to vary: the greeting, the punctuation around the date, where the blank lines go, how many bullets, which separator follows a workstream name, whether the report closes on tomorrow, and how he capitalises his own project names from one sentence to the next.
+
+Before writing anything, read the "What varies across the three" table in `references/corpus.md`.
+Every row in it is a thing this skill has already got wrong once.
+
+Where the three agree, enforce it. Where they differ, reproduce whatever he did that day and never pick a canonical form.
 
 ## The one rule that gets broken
 
@@ -30,25 +39,35 @@ You may not replace his verb with a more standard one, regularise a tense, compl
 If a phrase is intelligible, it ships as he said it, whether or not an editor would keep it.
 The only wording written fresh is a connective joining two of his fragments, and even then prefer one he already used.
 
-This is `W1` in `references/voice-rules.md`, it outranks every other rule there, and the worked example in that file is the fastest way to check a draft against it.
-Every sentence in the specimen that an editor would fix is a sentence this skill must leave alone.
+This is `W1` in `references/voice-rules.md`, it outranks every other rule there, and the worked examples in that file are the fastest way to check a draft against it.
+Every sentence in the corpus that an editor would fix is a sentence this skill must leave alone.
+
+His whitespace counts too (`W2`): the 28 July main outcome opens with a leading space and one of its bullets has a double space mid-sentence, and neither gets tidied.
 
 ## The shape
 
 ```
-EOD for today M/D/YY
-
-<one paragraph: the day's centre of gravity, how it went, closing on tomorrow>
-
- - <workstream>. <what happened>
- - <workstream>: <what happened>
- - <workstream>. <what happened>
+<greeting, only if he used one>
+<date line, containing EOD for today and M/D/YY>
+<one paragraph: the day's centre of gravity and what happened to it>
+ - <what happened>
+ - <what happened>
  - <what happened>
 ```
 
-Bullets are one leading space, a hyphen, one space.
-Most important priority first.
-Four is the ceiling. Two priorities produce two bullets.
+That order never changes. Almost everything else about it does:
+
+| Part | Fixed | His to vary |
+| :--- | :--- | :--- |
+| Greeting | nothing | present or absent, on its own line or folded into the date line |
+| Date line | the words `EOD for today`, and `M/D/YY` unpadded with a two-digit year | where the colon goes, or whether there is one |
+| Blank lines | none of them | after the greeting, after the date line, before the first bullet |
+| Main outcome | one paragraph, on one line, opening with the day's centre of gravity | length, whether it states a feeling, whether it closes on tomorrow |
+| Bullets | the ` - ` marker, priority order, four as a ceiling | how many, whether each names its workstream, which separator follows the name |
+
+Four is the ceiling and never a target. Three is attested. Two priorities produce two bullets.
+
+When his notes give no signal on a varying part, follow the 30 July shape: no greeting, a blank line after the date line and another before the bullets. It is the most readable of the three and the safest default.
 
 ## Two modes for gathering the day
 
@@ -72,17 +91,20 @@ Rules on evidence, all of them `H1`:
 
 ## Procedure
 
-1. Read `references/specimen.md`, then `references/voice-rules.md`.
+1. Read `references/corpus.md`, then `references/voice-rules.md`.
 2. Take what he gave you. Do not ask him anything he has already answered.
 3. Group the day into workstreams, at most four. Fold small items into the workstream they belong to.
 4. Order the workstreams by priority. Infer the order when it is obvious from what he said: what he spent the day on, what he led with, what he called out as the focus.
-5. Assemble the main outcome from his own phrasing. It names the centre of gravity, says how it went, and closes on tomorrow. It is not a summary of the bullets (`M1`).
-6. Assemble the bullets in priority order, from his own phrasing. Each names its workstream, then says what happened (`B1`).
-7. Run the self-check below.
-8. Output the report, then one line naming the order you chose, then anything you need to ask.
+5. Assemble the main outcome from his own phrasing. It names the centre of gravity and says what happened to it. It is not a summary of the bullets (`M1`). It carries the feeling and the tomorrow only if he gave them (`M2`, `M4`).
+6. Assemble the bullets in priority order, from his own phrasing (`B1`, `B2`).
+7. Reproduce his greeting, his date-line punctuation and his blank lines from the notes (`G1`, `F1`, `F5`). Where the notes give no signal, use the 30 July shape.
+8. Run the self-check below.
+9. Output the report, then one line naming the order you chose, then anything you need to ask.
 
 Steps 5 and 6 say assemble rather than write on purpose.
 The sentences are already his. Your job is which ones go where, not how they read (`W1`).
+
+Step 7 is the one the corpus added. The report's furniture is his too, not a house style you supply.
 
 ## Ordering
 
@@ -108,12 +130,13 @@ Run all of these. A failure is a rewrite, not a caveat.
    An empty list passes. Anything else is `V1` and must be fixed before output.
 
 2. **Banned constructions** (`V2`). Walk the list in `references/voice-rules.md`.
-3. **Format** (`F1` to `F5`). Date line unpadded, ` - ` markers, no headers, no bold, no emoji, no tables.
+3. **Format** (`F1` to `F5`). Date is `M/D/YY` unpadded, ` - ` markers, no headers, no bold, no emoji, no tables. A bare URL is fine (`B7`).
 4. **No padding** (`F3`). Bullet count equals the number of priorities he actually reported.
-5. **Nothing invented** (`H1`). Every claim, number and completion traces to something he said or accepted.
+5. **Nothing invented** (`H1`). Every claim, number, link and completion traces to something he said or accepted.
 6. **Unfinished stays unfinished** (`B3`).
-7. **Voice not raised** (`V4`). Contractions intact, short declarative runs not merged, separators after workstream names still varied (`B2`, `B5`).
+7. **Voice not raised** (`V4`). Contractions intact, short declarative runs and fragments not completed, separators after workstream names still varied (`B2`, `B5`).
 8. **Wording preserved** (`W1`). Put his notes and your draft side by side, sentence by sentence. For every sentence that changed, name why. "It reads better" is a failure, not a reason. Anything left that is only a grammar improvement gets reverted to his wording.
+9. **Nothing normalised** (the varies rules). Walk the "What varies across the three" table in `references/corpus.md` row by row against your draft. For each row, either his notes decided it or the default did. If you decided it because it looked more consistent, that is the failure this step exists to catch. Watch in particular for: a greeting added or dropped, the date-line punctuation regularised, blank lines inserted or removed, separators made uniform, and his project-name capitalisation reconciled between two occurrences (`V5`).
 
 ## Output contract
 
@@ -135,7 +158,7 @@ This skill does not read a project's `voice.md`.
 An EOD is not outward copy and is not scoped to one project.
 The specimen alone spans ProfitsX, MovingScrubs, a growth engine animation and a kitchen mockup, so there is no single `voice.md` that could apply, and picking one would impose one client's register on his account of his own day.
 
-The authority for this skill is `references/specimen.md`, which is his writing rather than a project's.
+The authority for this skill is `references/corpus.md`, which is his writing rather than a project's.
 
 One narrow exception: if he names a project that has a `voice.md`, its "Words this project uses" section may be consulted for how a product noun is spelled.
 Even then `V5` outranks it. He spells it the way he says it that day.
