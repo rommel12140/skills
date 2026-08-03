@@ -7,9 +7,65 @@ Severity is the same three levels the other skills in this repo use.
 
 | Level | Meaning | Action |
 | :--- | :--- | :--- |
-| P0 | Breaks the format or states something untrue | Never ship |
+| P0 | Breaks the format, states something untrue, or rewrites him | Never ship |
 | P1 | Reads as somebody else's writing | Fix before output |
 | P2 | Cosmetic drift | Fix when cheap |
+
+`W1` outranks every other rule in this file.
+Where another rule seems to ask for a smoother sentence, it does not. Read `W1` again.
+
+---
+
+## W - Wording
+
+### W1 - Preserve his wording. The skill assembles and orders, it does not re-word - P0
+
+This is the first rule in the file because it is the one that gets broken.
+
+His words on it: "The roughness is my voice. Follow my voice, and making it smoother is kinda like feeling AI sloppish."
+
+**What the skill may do**
+
+- Choose which of his notes become which bullet.
+- Put the bullets in priority order.
+- Drop a duplicate.
+- Fix a genuine typo that would confuse a reader.
+
+**What the skill must not do**
+
+- Replace his verb with a more standard one.
+- Regularise a tense.
+- Complete a sentence fragment.
+- Reorder a clause for flow.
+- Expand or contract a contraction he chose.
+- Drop a trailing "and stuff" or "or whatever".
+- Swap a dictated word for a tidier synonym.
+
+If a phrase is intelligible, it ships as he said it, whether or not an editor would keep it.
+
+The only wording that may be written fresh is a connective needed to join two of his fragments.
+Even then, prefer a connective he already used.
+
+**Worked example**
+
+This is the ruling that produced the rule. Left is what he wrote. Right is what a first version of this skill produced from the same day's notes, and every line on the right is a defect.
+
+| He wrote | The skill wrote |
+| :--- | :--- |
+| Tomorrow, I have ALL my AI colleagues, which I can delegate like importing to webflow, and stuff. | Tomorrow, I have ALL my AI colleagues so I can delegate stuff like the webflow import. |
+| Piecing up together to create one Homepage from the fintech, private equity, and other templates. | Pulling one Homepage together out of the fintech template, the private equity one, and some others. |
+| noting all the things we've talked about yesterday | noting all the things we talked about yesterday |
+| Components are being built now. | Components are being built right now. |
+| Conceptualize for a better growth engine with the new inspiration. | Conceptualized a better growth engine off the new inspiration. |
+| Prepared the info and brand settings for the kitchen mockup, tomorrow I'm gonna send the mockup. | Prepped the info and brand settings for the kitchen mockup, sending the mockup tomorrow. |
+
+Every entry on the right is grammatically better and every one is less him.
+
+Look at what was actually removed: a trailing "and stuff", a non-standard verb form ("Piecing up together", and "Conceptualize" where standard English wants a past tense), a contraction, a dictated "I'm gonna", and a clause order that reads the way a person talks rather than the way a person edits.
+
+None of those were errors. They were the voice.
+
+Apply this rule from the table rather than from the description. The comparison is easier to check a draft against than any wording of the principle.
 
 ---
 
@@ -134,6 +190,8 @@ python3 -c "import sys;t=open(sys.argv[1],encoding='utf-8').read();print([(i,c,h
 
 An empty list is the pass condition.
 
+This is the one place `W1` yields. If his notes carry a dash character, replace the character and change nothing else about the sentence.
+
 ### V2 - Banned constructions - P0
 
 None of these, in the report or in the commentary around it:
@@ -151,11 +209,13 @@ None of these, in the report or in the commentary around it:
 `we` for the work, `I` for himself.
 No third person, no passive rewrite that removes him from his own day.
 
-### V4 - Contractions and spoken register - P1
+### V4 - Contractions and spoken register - P0
 
 `everything's`, `we'll`, `I'm gonna`, `and stuff`.
-This is dictated speech lightly tidied.
+This is dictated speech, and the roughness in it is the voice.
 Raising it into written prose is a finding, not an improvement.
+
+"Lightly tidied" is not a licence to edit. See `W1`: the tidying allowed is a genuine typo, nothing else.
 
 ### V5 - His spelling of names - P0
 

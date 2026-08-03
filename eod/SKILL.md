@@ -17,6 +17,22 @@ It is not a general standup or status-report generator, and it should not be ada
 `references/voice-rules.md` holds the rules derived from it, each with an ID.
 Read the specimen before applying any rule. When the two disagree, the specimen wins.
 
+## The one rule that gets broken
+
+**Preserve his wording. This skill assembles and orders. It does not re-word.**
+
+His words on it: "The roughness is my voice. Follow my voice, and making it smoother is kinda like feeling AI sloppish."
+
+You may choose which of his notes become which bullet, put the bullets in priority order, drop a duplicate, and fix a genuine typo that would confuse a reader.
+
+You may not replace his verb with a more standard one, regularise a tense, complete a fragment, reorder a clause for flow, expand or contract a contraction he chose, drop a trailing "and stuff" or "or whatever", or swap a dictated word for a tidier synonym.
+
+If a phrase is intelligible, it ships as he said it, whether or not an editor would keep it.
+The only wording written fresh is a connective joining two of his fragments, and even then prefer one he already used.
+
+This is `W1` in `references/voice-rules.md`, it outranks every other rule there, and the worked example in that file is the fastest way to check a draft against it.
+Every sentence in the specimen that an editor would fix is a sentence this skill must leave alone.
+
 ## The shape
 
 ```
@@ -60,10 +76,13 @@ Rules on evidence, all of them `H1`:
 2. Take what he gave you. Do not ask him anything he has already answered.
 3. Group the day into workstreams, at most four. Fold small items into the workstream they belong to.
 4. Order the workstreams by priority. Infer the order when it is obvious from what he said: what he spent the day on, what he led with, what he called out as the focus.
-5. Write the main outcome. It names the centre of gravity, says how it went, and closes on tomorrow. It is not a summary of the bullets (`M1`).
-6. Write the bullets in priority order. Each names its workstream, then says what happened (`B1`).
+5. Assemble the main outcome from his own phrasing. It names the centre of gravity, says how it went, and closes on tomorrow. It is not a summary of the bullets (`M1`).
+6. Assemble the bullets in priority order, from his own phrasing. Each names its workstream, then says what happened (`B1`).
 7. Run the self-check below.
 8. Output the report, then one line naming the order you chose, then anything you need to ask.
+
+Steps 5 and 6 say assemble rather than write on purpose.
+The sentences are already his. Your job is which ones go where, not how they read (`W1`).
 
 ## Ordering
 
@@ -94,6 +113,7 @@ Run all of these. A failure is a rewrite, not a caveat.
 5. **Nothing invented** (`H1`). Every claim, number and completion traces to something he said or accepted.
 6. **Unfinished stays unfinished** (`B3`).
 7. **Voice not raised** (`V4`). Contractions intact, short declarative runs not merged, separators after workstream names still varied (`B2`, `B5`).
+8. **Wording preserved** (`W1`). Put his notes and your draft side by side, sentence by sentence. For every sentence that changed, name why. "It reads better" is a failure, not a reason. Anything left that is only a grammar improvement gets reverted to his wording.
 
 ## Output contract
 
@@ -103,6 +123,9 @@ Everything that is not the report goes after it: the order line, questions, anyt
 Never put a preamble above the date line, and never put a sign-off or a closing summary inside the report.
 
 Do not offer a score, a rating, or a judgement of the day.
+
+Do not offer a cleaned-up alternative version alongside the report.
+There is one report and it is in his words.
 
 ## voice.md
 

@@ -2,8 +2,8 @@
 
 The correct answer for this case already exists: it is `references/specimen.md`, written by the owner from the same day.
 
-A run passes when the checklist below holds.
-It does not have to match the specimen word for word.
+This case grades **phrasing fidelity**.
+The input notes are already in his words, so a correct run reproduces those words.
 
 ## The target
 
@@ -18,7 +18,38 @@ ProfitsX development. Exciting, everything's coming together, drafting stage is 
  - Prepared the info and brand settings for the kitchen mockup, tomorrow I'm gonna send the mockup.
 ```
 
+## The six phrasings that must survive
+
+Each row is a checkable expectation. The left column must appear in the output.
+The right column is what a first version of this skill produced instead, and each one fails the case.
+
+| Must appear | Fails the case |
+| :--- | :--- |
+| Tomorrow, I have ALL my AI colleagues, which I can delegate like importing to webflow, and stuff. | Tomorrow, I have ALL my AI colleagues so I can delegate stuff like the webflow import. |
+| Piecing up together to create one Homepage from the fintech, private equity, and other templates. | Pulling one Homepage together out of the fintech template, the private equity one, and some others. |
+| noting all the things we've talked about yesterday | noting all the things we talked about yesterday |
+| Components are being built now. | Components are being built right now. |
+| Conceptualize for a better growth engine with the new inspiration. | Conceptualized a better growth engine off the new inspiration. |
+| Prepared the info and brand settings for the kitchen mockup, tomorrow I'm gonna send the mockup. | Prepped the info and brand settings for the kitchen mockup, sending the mockup tomorrow. |
+
+Every entry in the right column is grammatically better than the left, and that is exactly why it fails.
+His ruling: "The roughness is my voice. Follow my voice, and making it smoother is kinda like feeling AI sloppish."
+
+Grade this table first. If any row fails, the run fails, whatever else it got right.
+
 ## Checklist
+
+### Wording (`W1`)
+
+- [ ] All six rows above hold.
+- [ ] No verb replaced with a more standard one.
+- [ ] No tense regularised.
+- [ ] No fragment completed. "Thank you pages, wired up." stays a fragment.
+- [ ] No clause reordered for flow.
+- [ ] No contraction expanded or introduced.
+- [ ] No trailing "and stuff" dropped.
+- [ ] No dictated word swapped for a tidier synonym. "gonna" survives.
+- [ ] Any sentence that differs from the notes can be justified by grouping, ordering, capitalisation at the start of a sentence, or a genuine typo. Nothing is justified by reading better.
 
 ### Format
 
@@ -29,30 +60,17 @@ ProfitsX development. Exciting, everything's coming together, drafting stage is 
 - [ ] No headers, bold, italics, tables, code fences, links or emoji.
 - [ ] Zero characters above U+007F, proved by script and not by `grep`.
 
-### Main outcome
-
-- [ ] One paragraph, no line breaks inside it.
-- [ ] Names ProfitsX as the day's centre of gravity, not a run through all four bullets (`M1`).
-- [ ] Carries the feeling he gave: exciting, coming together, drafting stage done (`M2`).
-- [ ] Keeps the honest note on pace: slower today, less AI help (`M3`). Dropping or softening this fails the case.
-- [ ] Closes on tomorrow and the AI colleagues (`M4`).
-
-### Bullets
+### Assembly
 
 - [ ] Order is ProfitsX Homepage, Moving Scrubs, Growth Engine, kitchen mockup.
-- [ ] Each of the first three opens by naming its workstream.
+- [ ] The notes' feeling block, which arrives last, is assembled into the main outcome rather than left as a fifth bullet.
+- [ ] The parenthetical about yesterday, which arrives at the end of the ProfitsX block, is placed in the main outcome.
+- [ ] The main outcome names ProfitsX as the centre of gravity and does not run through all four bullets (`M1`).
+- [ ] The pace note survives (`M3`). Dropping or softening it fails the case.
+- [ ] Bullet 1 says the homepage is not done and names what unblocks it (`B3`), and keeps the reason it came first (`B4`).
+- [ ] Bullet 2 keeps webinars, GHL login and resources as separate sentences (`B5`).
 - [ ] The separator after the workstream name is not standardised across all four (`B2`).
-- [ ] Bullet 1 says the homepage is not done and names what unblocks it (`B3`).
-- [ ] Bullet 1 keeps the reason homepage came first (`B4`).
-- [ ] Bullet 2 keeps the short declarative run: webinars, GHL login, resources reported as separate sentences, not merged into a list (`B5`).
-- [ ] Bullet 4 stays short. One sentence is correct here (`B6`).
-
-### Voice
-
-- [ ] First person throughout, `we` for the work and `I` for himself (`V3`).
-- [ ] Contractions intact (`V4`).
 - [ ] `GHL` capitalised, `webflow` lowercase, `Homepage` capitalised (`V5`).
-- [ ] `ALL` capitalised, once (`V6`).
 
 ### Honesty
 
@@ -60,14 +78,20 @@ ProfitsX development. Exciting, everything's coming together, drafting stage is 
 - [ ] No number anywhere. The input has none.
 - [ ] Nothing in progress reported as done.
 
-## Known acceptable variation
+## Acceptable variation
+
+Narrow, and narrower than it used to be.
 
 - `MovingScrubs` and `Moving Scrubs` are both correct. The specimen uses both in one report.
-- Sentence wording inside a bullet may differ. Facts, order and register may not.
-- The order line under the report is expected and is not part of the report.
+- Capitalising the first word of a sentence his notes left lowercase.
+- Where in the report a given sentence lands, as long as it lands somewhere sensible.
+- A connective joining two of his fragments, where one is needed and none of his fit.
+
+Rewriting a sentence is not acceptable variation. That was the previous version of this case and it was wrong.
 
 ## Automatic fail
 
+- Any row of the six-row table broken.
 - A fifth bullet.
 - A completion the input did not report.
 - Merging the webinars, GHL login and resources sentences.

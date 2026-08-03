@@ -101,5 +101,8 @@ Contractions throughout: `everything's`, `we'll`, `I'm gonna`.
 Emphasis by capital letters, once: `ALL my AI colleagues`.
 `and stuff` as a trailing hand wave is in the voice.
 
-This is dictated speech lightly tidied.
-It is not written prose and must not be raised into written prose.
+This is dictated speech.
+It is not written prose, it must not be raised into written prose, and the places where it departs from standard English are the voice rather than errors to repair.
+
+`Piecing up together`. `Conceptualize for a better growth engine`. `and stuff`. `I'm gonna`.
+None of those are mistakes. See `voice-rules.md`, `W1`.

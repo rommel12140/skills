@@ -8,12 +8,15 @@ That is what the report has to say.
 ```
 EOD for today 8/5/26
 
-ProfitsX webflow import. Got the hero and the two middle sections in, then the pricing table stopped me. Growth Engine animation shipped, story and animation in sync now like we wanted. Kitchen mockup went out this morning. Tomorrow starts with rebuilding that pricing section as a flex row so the import can finish.
+Webflow import for the ProfitsX homepage. Growth engine animation, shipped it. Kitchen mockup went out this morning. The pricing table is fighting me so the import is not done, that's first thing tomorrow.
 
- - ProfitsX Homepage import. Hero and the two middle sections are in webflow. Pricing table is not done, the grid breaks at 1280. It needs rebuilding as a flex row before it'll go in, that's first thing tomorrow.
- - Growth Engine animation. Shipped. The story and the animation are in sync now.
- - Kitchen mockup. Sent this morning, waiting on their feedback.
+ - ProfitsX homepage. Webflow import, started it, got the hero and the two middle sections in, but the pricing table is fighting me. The grid breaks at 1280. Not done. I need to rebuild that section as a flex row before it'll go in, that's first thing tomorrow.
+ - Growth engine animation. Shipped it. The story and the animation are in sync now like we wanted.
+ - Kitchen mockup. Went out this morning, waiting on their feedback.
 ```
+
+"the pricing table is fighting me", "not done", "that's first thing tomorrow" and "like we wanted" are all his and all survive intact.
+"so the import is not done" in the main outcome is a connective joining two of his fragments, which is the one thing `W1` allows to be written fresh.
 
 Then, outside the report:
 
@@ -28,6 +31,9 @@ One thing I found that you didn't mention: a commit today bumping the GHL webhoo
 - [ ] The pricing table is reported as not done (`B3`). "Import is done" or "import is in place" fails the case.
 - [ ] What unblocks it is named: rebuild the section as a flex row (`B3`).
 - [ ] "the grid breaks at 1280" survives. The specific failure is the useful part.
+- [ ] "the pricing table is fighting me" survives in his words (`W1`). "The pricing table is proving difficult" or "the pricing table blocked me" fails.
+- [ ] "I need to rebuild that section as a flex row" keeps him as the subject. "It needs rebuilding" fails.
+- [ ] "like we wanted" is not dropped from the animation bullet.
 - [ ] The main outcome does not open on the shipped animation to make the day sound better. The import is the centre of gravity and it goes first (`M1`, `M3`).
 - [ ] The kitchen mockup is reported as sent and waiting, not as approved or closed.
 - [ ] Three bullets, not four (`F3`).

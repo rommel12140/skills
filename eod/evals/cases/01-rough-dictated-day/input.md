@@ -3,35 +3,39 @@
 Date: 30 July 2026.
 Mode: dictation only. No evidence gathering.
 
-The notes below are what he might have said, out of order and unsorted.
-They contain every fact that appears in the specimen and nothing else.
+The notes below are the day as he dictates it: out of order, unsorted, and in his own phrasing.
+They carry every fact that appears in the specimen and nothing else.
+
+This case grades phrasing fidelity, not plausibility.
+The notes are already in his words, so the skill's whole job is grouping, ordering and the date line.
+Any sentence that comes out grammatically better than it went in is a `W1` failure.
 
 ## Input
 
 ```
 ok EOD time. 7/30
 
-today was mostly profitsx. homepage. we're pulling one homepage together out of
-the fintech template and the private equity one and some others. components are
-being built right now. not done yet, but tomorrow we can import it to webflow.
-doing homepage first on purpose, once it's done the rest of the pages get easier
-because we'll have the whole concept.
+today was mostly profitsx, the homepage. piecing up together to create one
+homepage from the fintech, private equity, and other templates. components are
+being built now. not yet done but tomorrow, we'll be able to import it to
+webflow. homepage is being focused right now because once this is done, the
+other pages will be easier since we now have the full concept. i was noting all
+the things we've talked about yesterday.
 
-also moving scrubs. new popup component on the resources page for the download.
-used to be a direct download, now they fill up the form first to get the
-resource. webinars done. ghl login done. resources done. thank you pages wired
-up. exit popup and newsletter popup done.
+moving scrubs. added a new popup component for the resources page for download.
+before, it was direct download, right now they have to fill up the form to
+receive the resource. webinars are done. ghl login is done. resources is done.
+thank you pages, wired up. exit and newsletter popups are done. so that's the
+resources automation from GHL wired up.
 
-growth engine 3d animation, i conceptualized a better growth engine off the new
-inspiration. keeps our story and the animation in sync. hoping we ship them
-together tomorrow.
+growth engine 3d animation. conceptualize for a better growth engine with the
+new inspiration. this helps our story and animation to be in sync. hoping to
+ship it together tomorrow.
 
-and i prepped the info and brand settings for the kitchen mockup, sending the
-mockup tomorrow.
+prepared the info and brand settings for the kitchen mockup, tomorrow i'm gonna
+send the mockup.
 
-overall feeling: exciting, everything's coming together, drafting stage is done.
-was a bit slower today, less AI help. tomorrow i have ALL my AI colleagues so i
-can delegate stuff like the webflow import.
-
-oh and on homepage i was noting all the things we talked about yesterday.
+feeling: exciting, everything's coming together, drafting stage is done. a
+little slower today with less AI help. tomorrow, i have ALL my AI colleagues,
+which i can delegate like importing to webflow, and stuff.
 ```

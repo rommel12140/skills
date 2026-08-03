@@ -20,6 +20,7 @@ Ten of the gates cannot be answered from source, so the skill renders the page w
 
 Writes the owner's end-of-day report from whatever he dictated, in his format: a dated line, one main-outcome paragraph, then up to four priority bullets in priority order.
 It is built against one specimen, his own EOD for 30 July 2026, which is the authority on format, tone, length and punctuation; the derived rules carry IDs so a violation can be named.
+The rule that outranks the rest: it assembles and orders, it does not re-word. The roughness in dictated speech is the voice, so a sentence that comes out grammatically better than it went in is a defect.
 Dictation is the primary mode and works with nothing else available. On request it will read the day's commits and merged pull requests to fill gaps, but found work is offered to him rather than written into a bullet, and it never pads to four.
 
 ## No score

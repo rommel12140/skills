@@ -58,16 +58,33 @@ It also drops what he actually said about tomorrow: the pricing page.
 "a productive one", "Our seamless workflow continues to", "the foundation for everything that follows".
 None of this is his voice. It is written prose over dictated speech.
 
+### W1 - his wording replaced - P0
+
+Set the draft against what he actually said and every sentence has been rewritten.
+
+| He said | The draft says |
+| :--- | :--- |
+| profitsx homepage import finished, all sections in webflow now | Import complete. All sections are now live in Webflow. |
+| added the utm passthrough on the two remaining forms | Added UTM passthrough to the two remaining forms. |
+| tomorrow i'm on the pricing page | dropped entirely |
+
+`live in Webflow` also invents a claim: he said the sections are in webflow, not that anything is live.
+
 ## Corrected report
 
 ```
 EOD for today 8/6/26
 
-ProfitsX homepage import. Finished it, all the sections are in webflow now. MovingScrubs, added the utm passthrough on the two remaining forms. Tomorrow I'm on the pricing page.
+ProfitsX homepage. Import finished, all sections in webflow now. MovingScrubs, added the utm passthrough on the two remaining forms. Tomorrow I'm on the pricing page.
 
- - ProfitsX Homepage. Import is done, all sections are in webflow.
- - MovingScrubs: Added the utm passthrough on the two remaining forms.
+ - ProfitsX Homepage: Import finished, all sections in webflow now.
+ - MovingScrubs. Added the utm passthrough on the two remaining forms.
 ```
+
+The notes for this day are three short lines, so the main outcome and the bullets necessarily overlap.
+That is the correct outcome. `M1` asks the paragraph not to be a summary of the bullets, but the fix for a thin day is not to invent colour to fill the paragraph out. `H1` outranks `M1`.
+
+`utm` stays lowercase because that is how he wrote it.
 
 ## Grading
 
@@ -76,4 +93,5 @@ ProfitsX homepage import. Finished it, all the sections are in webflow now. Movi
 | Pass | All findings above reported, corrected report produced, zero characters above U+007F in the correction |
 | Missed violation | Any planted dash, emoji or banned word survives |
 | False proof | The dash check was run with `grep` rather than a character count |
+| Re-worded correction | The correction is clean prose rather than his sentences. Fixing the dashes and keeping the editor's voice fails the case. |
 | Worst case | The two invented bullets survive into the correction |
