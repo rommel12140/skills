@@ -30,6 +30,9 @@ Several rules in the first version of this file were facts about 30 July rather 
 `W1` outranks every other rule in this file.
 Where another rule seems to ask for a smoother sentence, it does not. Read `W1` again.
 
+`R1` carries the same severity as `W1` and is the one rule `W1` does not settle on its own.
+The trade between them is narrow. `R1` decides whether a sentence about developer process may appear at all. `W1` still decides the wording of everything that does appear.
+
 ---
 
 ## W - Wording
@@ -109,6 +112,101 @@ This does not license inventing whitespace. It means never stripping his.
 
 ---
 
+## R - Reader
+
+The two rules in this family came from his ruling on 4 August 2026, after he read an EOD written for him.
+Everything before them taught the skill his voice. Neither of them is about voice. They are about who the report is for.
+
+### R1 - The reader is his boss, and his boss is not a developer - P0
+
+Support: A, B, C. Zero developer process across all three. And his ruling of 4 August 2026.
+
+His words: "My boss isn't a developer so he doesn't understand merge, he just wants to know what job is done and stuff."
+
+**The distinction is not technical versus non-technical, and getting that wrong breaks the skill.**
+
+His own three EODs are full of product and tool names and every one of them is correct. Webflow, GHL, GHL Login, popups, thank you pages, webinars, homepage, components, templates, sitemap, mockups, CMS, wireframe, navbar, footer.
+Those stay. His boss knows the tools the business runs on and the things it sells.
+
+What must never appear is **developer process**:
+
+merged, merge, pull request, PR, branch, commit, validation, pipeline, code review, refactor, stylesheet, CSS, API, endpoint, repository, repo, deploy, build step, test suite.
+
+A job is **done**, **in progress**, or **tomorrow**. How it got there is not the report.
+
+The corpus already writes this way, so the rule is derived rather than imposed. From A:
+
+`Webinars are done. GHL Login is done. Resources is done. Thank you pages, wired up.`
+
+Named things, and their state. Nothing about the mechanics.
+
+**Worked example**
+
+Left is the real failure that produced this rule. Right is the same day, written for the person who reads it.
+
+| Written for a developer, wrong | Written for his boss, right |
+| :--- | :--- |
+| Merged the insight detail page | The insight article page is done |
+| 27% of the stylesheet survives, no external stylesheet needed | Worked out how much of the page Webflow can handle on its own, turns out most of it |
+| The Embed version is in validation | Putting that same thing on the widget is being tested today |
+| GHL's read API omits rawHTML so the body comes from the published site | GHL has everything the pages need, including reading time |
+
+Every sentence on the left is accurate. That is what makes this rule necessary: an accurate sentence that names developer process is a failure, not a near miss.
+
+**How to restate**
+
+Name the thing, then say what state it is in. If the mechanic was the whole point of the day, say what it got him, in product terms, not what he ran.
+
+**The banned list is about the sense, not the string**
+
+These words are banned as names for developer process. A word that means something else in his world is his to use.
+
+`review` in "reviewing the animation pass" is him looking at an animation, and it ships. `code review` does not.
+`deploy` as a build step does not ship. `published site` and `live` do, because that is what his boss can see.
+
+The test is what the word denotes in the sentence, not whether the string appears.
+
+**Interaction with `W1`**
+
+This is the second place `W1` yields, the first being `V1`.
+
+His notes are dictated to this skill, not to his boss. When a note names developer process, the mechanic comes out and the outcome goes in.
+`W1` still governs everything else in that sentence: the restatement uses his nouns, his register, his contractions and his fragments, and no other word moves.
+
+If the restatement cannot be made without inventing a claim, `H1` wins and the item is asked about below the report rather than guessed at.
+
+### R2 - Routine recurring work is never a priority bullet - P0
+
+Support: A, B, C in the negative, nothing recurring earns a bullet in any of them. And his ruling of 4 August 2026.
+
+His words: "Never add priority for planning the week. We are doing that every Friday and Sunday for the next week."
+
+Weekly planning happens every Friday and Sunday. It is a standing ritual, not something that moved.
+
+**Anything that happens on a fixed recurring schedule stays out of the bullets.**
+
+Planning is the example, not the whole of it. The same holds for a standing sync that only synced, a daily check that found nothing, a weekly report that got written because it is weekly.
+
+Bullets are for work that changed state. A recurring commitment that happened on schedule does not earn one, however much of the day it took.
+
+If he mentions it in his notes, it is context for the main outcome at most, and usually it is simply dropped.
+
+**This is not a licence to drop real work that happens to recur.**
+
+A weekly client call where something was decided is a decision, and decisions are work.
+A recurring session that produced a mockup produced a mockup.
+
+The test is whether the thing moved, not whether it repeats.
+
+| His note | Bullet? |
+| :--- | :--- |
+| Planned next week with the team, Friday and Sunday like always | No. Recurring, and nothing moved. |
+| Weekly call with Reico, they signed off on the kitchen mockup | Yes. The sign-off moved. |
+| Daily standup | No. |
+| Standup ran long so the homepage slipped to tomorrow | The slip belongs in the report (`M3`). The standup does not. |
+
+---
+
 ## G - Greeting
 
 ### G1 - The greeting is optional and its form varies - P0
@@ -165,6 +263,8 @@ Four is the ceiling. Three is attested in C, so it is a normal day and not a sho
 Inventing a bullet to reach four is fabrication, which is `H1`.
 
 If more than four things happened, fold the smaller ones into the bullet they belong under, or leave them out and say so outside the report.
+
+Recurring work is not a candidate for a bullet in the first place, so it never competes for one of the four. See `R2`.
 
 ### F4 - Plain text only - P0
 
