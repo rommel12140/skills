@@ -1,6 +1,6 @@
 # Design tells
 
-Thirty-one entries in eleven categories.
+Forty-two entries in ten categories.
 Every entry has a stable ID, a severity, whether it needs a rendered page, and a gate phrased so that an affirmative answer fails.
 
 Stack-specific fixes live in `fixes-by-stack.md`, keyed by the same IDs.
@@ -82,6 +82,13 @@ Gate: Is any colour value declared outside the design token layer? Hex, `rgb()`,
 Why: it is how a palette drifts, and it makes theming impossible.
 Instead: add the value to the token set and reference it.
 
+### C5 - Pure black as a surface or text colour - P1 - render: no
+
+Gate: Is `#000000`, `black`, or `rgb(0, 0, 0)` used as a page background, a surface, or body text?
+Detect: colour declarations and token definitions. Check the dark theme as well as the light one.
+Why: pure black is the value that appears when nobody picked a value, and against white it gives small text enough contrast to shimmer.
+Instead: an off-black from the project's own palette, usually the darkest neutral with a trace of the brand hue in it.
+
 ---
 
 ## L - Layout and composition
@@ -111,6 +118,21 @@ Gate: At 1280x800, is any of the hero's essential content (headline, primary act
 Why: 1280x800 is the common laptop, and heroes are routinely tuned at 1440x900 where the problem is invisible.
 Instead: reduce the vertical padding, shrink the display size, or move the action up.
 
+### L5 - Hairlines and crosshairs as decoration - P1 - render: yes
+
+Gate: Does the page draw vertical rules, horizontal hairlines, or crosshair marks that no content aligns to?
+Exempt: a rule that separates real content, and a grid the layout genuinely sits on.
+Why: the lines are there to make the page look constructed, and a line nothing aligns to is the opposite of construction.
+Instead: delete them. If the layout has a grid worth showing, align the content to it first, then decide whether the line still adds anything.
+
+### L6 - Rotated vertical text - P1 - render: no
+
+Gate: Is any text rotated to run vertically, as a side label, a section marker, or an edge caption?
+Detect: `writing-mode: vertical-rl`, and `transform: rotate(90deg)` or `rotate(-90deg)` on a text element.
+Exempt: a language set vertically by convention, and a table header where rotation is the only way the column fits.
+Why: it is the agency-portfolio flourish, applied because the margin was empty rather than because the text belongs there.
+Instead: set the text horizontally where the reader is already looking, or cut it. Most rotated labels are labels nobody needed.
+
 ---
 
 ## K - Components
@@ -138,6 +160,13 @@ Instead: set the icon inline with the text, at text size, or remove it. Most of 
 Gate: Do cards or callouts carry a coloured left or top border as their only distinguishing mark?
 Why: it substitutes a stripe for a design decision.
 Instead: distinguish by surface, spacing, or type. If the colour carries status, pair it with a label so it is not the only signal.
+
+### K5 - Colour dots that carry no state - P1 - render: no
+
+Gate: Does a coloured dot sit before nav links, list rows, badges, or headings without indicating a state?
+Exempt: a dot reporting real state, such as a service being up or a slot being open, used once or twice rather than on every row.
+Why: it is the stock ornament for making a list look like a dashboard, and it teaches the reader that colour means nothing here.
+Instead: remove the dot. Where something genuinely has state, keep it and add a text label, so colour is not the only signal.
 
 ---
 
@@ -207,6 +236,43 @@ Gate: Do headings, button labels, empty states, or tooltips contain anything fro
 Why: interface copy is written last and reviewed least.
 Instead: run `copy-review` over the extracted strings.
 
+### CP5 - Fabricated version, build, or live status - P0 - render: no
+
+Gate: Does the interface state a version, build string, release stage, or live reading that is not true of the product? `V0.6`, `v0.6.2-rc.1`, `BETA`, `EARLY ACCESS`, `INVITE-ONLY PREVIEW`, `last sync 4s ago`, `Reservation 412 of 800`, a clock or a temperature wired to nothing.
+Detect: eyebrows above the hero, footer strips, and the small type inside any product preview.
+Exempt: a real version, a release stage the project is actually in, and a reading wired to real data.
+Note: `CP1` covers section and step numbering. `CP3` exempts version numbers, because it checks claims against `voice.md` rather than checking whether the product has that version.
+Why: it invents product state to make the page look like a running system, and unlike a wrong colour it is a factual claim that is false.
+Instead: state the real version or stage, wire the reading to real data, or delete the element.
+
+### CP6 - The middle dot as the default separator - P2 - render: no
+
+Gate: Does any single line carry more than one middle dot, or is the middle dot the separator throughout the nav, the meta strips, the captions, and the footer?
+Detect: search for the `·` character and for `&middot;`, and count per line rather than per page.
+Why: one middle dot is a separator and four are a texture, and the texture is the tell.
+Instead: ration it to one per line. Where more structure is needed, use a line break or a second column.
+
+### CP7 - Placeholder people and companies - P0 - render: no
+
+Gate: Does the interface name a person, contact, or company that does not exist? "John Doe", "Jane Smith", `name@example.com`, `(555) 123-4567`, "123 Main Street", an egg avatar or a stock user glyph, and invented brands such as "Acme", "Nexus", or "SmartFlow".
+Detect: avatar image sources, testimonial attributions, the logo row, and the footer contact block. These are the four places a template's stand-ins survive longest.
+Why: mockups made here have reached clients with the template's contact block still in them, which is how a client finds out the page was not built for them.
+Instead: use the client's real people, contacts, and logos. Where a real one does not exist yet, remove the element rather than filling it, so the gap stays visible.
+
+### CP8 - Figures with placeholder shape - P0 - render: no
+
+Gate: Does any figure have the shape of a number nobody measured? `99.99%`, `50%`, `100%`, `1234567`, `10,000+`, `24/7`, `4.9/5`, or a row of stat tiles that are all round.
+Exempt: a figure listed under "Numbers we are allowed to state" in `voice.md`, and a value read from live data.
+Note: `CP3` asks whether a figure is sourced, and cannot run without `voice.md`. This gate asks whether the figure reads as invented, and runs either way.
+Why: template content ships, and pages built here have gone out to clients carrying the sample data's round numbers.
+Instead: use the measured figure, or cut the claim. Where a mockup genuinely needs sample data, make it uneven, because real data is uneven.
+
+### CP9 - Performative section labels - P1 - render: no
+
+Gate: Does a section, sidebar, or quote block carry a crafted label in place of a functional one? "Field notes", "On our desks", "Currently on the bench", "Loose plates", "Quietly trusted by".
+Why: the label performs a temperament instead of naming what sits under it, so the reader has to read the section to find out what the section is.
+Instead: name it plainly. "Testimonials", "Latest writing", "Trusted by", "What we are working on now". Where the content is obvious without a label, drop the label.
+
 ---
 
 ## IM - Imagery
@@ -216,6 +282,13 @@ Instead: run `copy-review` over the extracted strings.
 Gate: Does the page use glossy 3D blobs, floating geometric shapes, or abstract render stock imagery?
 Why: it fills space without saying anything about the product.
 Instead: show the product, the people who use it, or the work it produces. If none of those can be shown, show nothing.
+
+### IM2 - Fake product UI built from divs - P0 - render: no
+
+Gate: Is a product preview built out of styled divs rather than an image? A fake dashboard, a fake terminal with a window bar and three dots, a fake task list, a fake chat thread.
+Detect: a deep div tree in the hero or a feature section with no `img` inside it, carrying window chrome, monospace text rows, or repeated identical list items.
+Why: it shows an interface the product may not have, assembled to fill the space where a screenshot would go.
+Instead: a screenshot of the real product. Where there is nothing to screenshot yet, show nothing, because an empty hero is more honest than an invented one.
 
 ---
 
@@ -239,6 +312,13 @@ Instead: hold the width constant and change the colour, or use an outline that d
 Gate: Does any button label, primary nav link, tab label, breadcrumb, or CTA wrap to two or more lines?
 Why: a wrapped control reads as broken, and it usually means the label is doing too much.
 Instead: shorten the label. If it cannot be shortened, widen the control.
+
+### A4 - Custom mouse cursor - P1 - render: no
+
+Gate: Does the page replace the system cursor with an image, hide it, or attach a following element to the pointer?
+Detect: `cursor: url(...)`, `cursor: none`, and any component tracking `mousemove` to position a dot or a ring.
+Why: it overrides the cursor size, contrast, and shape a person set in their operating system, which for some people is the setting that makes a screen usable.
+Instead: keep the system cursor. Where hover feedback is wanted, put it on the element being hovered.
 
 ---
 

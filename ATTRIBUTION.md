@@ -19,6 +19,14 @@ Those encode a specific design taste that conflicts in places with the rules thi
 
 Taken: the category and ID scheme (`T`, `C`, `L`, `K`, `S`, `M`, `I`, `CP`, `IM`); the P0 to P2 severity model; the practice of pairing each fix to a named stack; several catalog entries (`T1`, `C1`, `C2`, `L1`, `L2`, `K1`, `K3`, `K4`, `I2`, `CP2`, `IM1`).
 
+### leonxlnx/taste-skill
+<https://github.com/leonxlnx/taste-skill>
+
+Taken: eleven entries in `design-review`, from section 9 of `skills/taste-skill/SKILL.md` at commit `72e2995` (`C5`, `L5`, `L6`, `K5`, `CP5`, `CP6`, `CP7`, `CP8`, `CP9`, `IM2`, `A4`). Each was rewritten as a gate in this catalog's form, given a severity, a render flag, and a fix for each of the three stacks.
+
+Not taken: the three dials, the brief to design-system map, the package and icon-library prescriptions, and the aesthetic presets.
+Those conflict with gate `X1`, which requires the visual language to come from the client's world rather than from a named aesthetic, and they assume an npm stack that most of the work here does not use.
+
 ### conorbronsdon/avoid-ai-writing
 <https://github.com/conorbronsdon/avoid-ai-writing>
 

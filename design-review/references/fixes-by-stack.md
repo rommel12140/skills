@@ -52,6 +52,12 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 - **React/Tailwind**: replace arbitrary values such as `bg-[#7c3aed]` with a theme colour.
 - **Webflow**: convert the one-off colour into a global swatch, then reapply it.
 
+## C5 - Pure black as a surface or text colour
+
+- **HTML/CSS**: change the value in the token definition to an off-black, then grep for `#000`, `#000000`, `black`, and `rgb(0, 0, 0)` to catch the rules that bypassed the token.
+- **React/Tailwind**: replace `bg-black` and `text-black` with a named theme colour. Reaching for the utility again is how the value comes back.
+- **Webflow**: edit the black swatch in the global palette, which updates every element using it. Then check for elements set to the built-in Black rather than to the swatch, because those do not follow.
+
 ---
 
 ## L1 - Centred hero
@@ -78,6 +84,18 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 - **React/Tailwind**: lower `py-*` on the hero and add a smaller display size at the `lg` breakpoint.
 - **Webflow**: reduce the section padding on the Desktop breakpoint, and check the 1280 preview rather than only the widest.
 
+## L5 - Hairlines and crosshairs as decoration
+
+- **HTML/CSS**: delete the absolutely positioned rule divs and the crosshair pseudo-elements. Where a rule genuinely separates content, put a `border` on the content element rather than drawing a layer over it.
+- **React/Tailwind**: remove the decorative overlay component. It is usually an absolutely positioned div carrying `border-l` on repeated children, or a `repeating-linear-gradient` background.
+- **Webflow**: delete the line div blocks from the section in the Navigator. They are usually 1px absolutely positioned children of the section wrapper, so the section itself needs no change.
+
+## L6 - Rotated vertical text
+
+- **HTML/CSS**: remove the `writing-mode` declaration or the rotate transform, then place the text horizontally or delete the element.
+- **React/Tailwind**: drop `[writing-mode:vertical-rl]` or `rotate-90` from the label, and check whether the column it occupied is still needed.
+- **Webflow**: clear the rotation in the text block's Effects panel, or delete the text block. Shrinking the font is not the fix.
+
 ---
 
 ## K1 - Uniform rounding and shadow
@@ -103,6 +121,12 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 - **HTML/CSS**: remove `border-left`, distinguish by surface colour or spacing. If the colour carries status, add a text label.
 - **React/Tailwind**: drop `border-l-4 border-primary`, use a distinct surface token and a status label.
 - **Webflow**: remove the left border on the card class and add a status text element.
+
+## K5 - Colour dots that carry no state
+
+- **HTML/CSS**: delete the dot element, or the `::before` that draws it. Where the dot reports real state, keep it and put a text label beside it.
+- **React/Tailwind**: remove the `h-2 w-2 rounded-full bg-*` span from the shared list item or nav link component. Removing it once clears every instance.
+- **Webflow**: delete the dot div from the list item or nav link. If it sits inside a component, edit the component so it clears everywhere rather than deleting instances one by one.
 
 ---
 
@@ -160,6 +184,36 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 
 - Stack-independent. Extract the strings and run `copy-review` over them.
 
+## CP5 - Fabricated version, build, or live status
+
+- **HTML/CSS**: delete the version eyebrow, the footer build string, and any static "last sync" or counter line. Where a reading should be live, replace the hardcoded string with the value from its source.
+- **React/Tailwind**: these are usually literal strings in a hero or footer component. Delete them, or pass the real value in as a prop so it cannot go stale.
+- **Webflow**: delete the eyebrow text element and the footer version text. Where the reading should be real, bind it to a CMS field rather than typing it into the Designer.
+
+## CP6 - The middle dot as the default separator
+
+- **HTML/CSS**: keep one middle dot per line and replace the rest with a line break or a second column. A meta strip carrying four fields is a list, not a sentence.
+- **React/Tailwind**: stop joining the array with `" · "`. Render the fields as flex children with a `gap-*` and no separator character.
+- **Webflow**: split the single text element into separate text elements inside a flex wrapper with a gap, rather than typing the dots into the string.
+
+## CP7 - Placeholder people and companies
+
+- **HTML/CSS**: replace the name, email, phone, address, avatar `src`, and logo files with the client's real ones. Where a real one does not exist yet, delete the element so the gap is visible at review rather than at launch.
+- **React/Tailwind**: testimonials and team members usually sit in an array in the page file. Empty the array and let the component render nothing, rather than leaving stand-in entries in it.
+- **Webflow**: replace the text in the contact block and swap the avatar and logo assets. Where the people come from a CMS collection, delete the seeded template items rather than editing them, because a half-edited seed item is what ships.
+
+## CP8 - Figures with placeholder shape
+
+- **HTML/CSS**: replace the figure with the measured value, or remove the stat block. Add the new figure to `voice.md` so `CP3` can check it on the next pass.
+- **React/Tailwind**: stat tiles are usually an array of objects in the page file. Remove the entries that have no measured value rather than rounding them to something plausible.
+- **Webflow**: edit the number text elements, and where they come from a CMS collection, clear the seeded values. Check the published page as well as the Designer, since a stale figure can survive in a published version.
+
+## CP9 - Performative section labels
+
+- **HTML/CSS**: replace the eyebrow text with a plain name, or delete the eyebrow and let the heading carry the section.
+- **React/Tailwind**: these arrive as a `label` or `eyebrow` prop on a section header component. Change the value at the call site, not in the component.
+- **Webflow**: edit the eyebrow text element, or delete it and check the heading's top margin still holds without it.
+
 ---
 
 ## IM1 - Abstract 3D render stock
@@ -167,6 +221,12 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 - **HTML/CSS**: replace with a real screenshot, a photograph of the work, or nothing.
 - **React/Tailwind**: same, and check the image is not being served at hero size for a decorative role.
 - **Webflow**: swap the asset, or delete the image element and let the layout close up.
+
+## IM2 - Fake product UI built from divs
+
+- **HTML/CSS**: replace the div tree with one `img` of a real screenshot, sized, with an `alt` describing what it shows. Where there is no product to screenshot, delete the block and let the hero close up.
+- **React/Tailwind**: delete the mock preview component. Do not keep it behind a flag, because a flagged mock is a mock that ships.
+- **Webflow**: delete the preview div block in the Navigator and put an image element in its place. The screenshot usually loads faster than the div tree it replaces.
 
 ---
 
@@ -187,6 +247,12 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 - **HTML/CSS**: shorten the label. If it cannot be shortened, widen the control or reduce its horizontal padding.
 - **React/Tailwind**: same, and add `whitespace-nowrap` only after the label is genuinely short enough to fit.
 - **Webflow**: shorten the button text, or widen the button and check every breakpoint.
+
+## A4 - Custom mouse cursor
+
+- **HTML/CSS**: remove `cursor: url(...)` and `cursor: none`, then delete the pointer-following element and its `mousemove` listener.
+- **React/Tailwind**: delete the cursor component and its provider, and remove `cursor-none` from the body or layout wrapper.
+- **Webflow**: delete the cursor interaction in the Interactions panel and remove the custom code embed that positions the follower. Both usually exist, and removing one leaves the other.
 
 ---
 
