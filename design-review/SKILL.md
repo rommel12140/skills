@@ -37,7 +37,7 @@ State which mode is running in the first line of output.
 
 ## Render-required gates
 
-Ten of the thirty-one gates cannot be answered from source: `C3`, `K2`, `L1`, `L4`, `M2`, `M3`, `IM1`, `A1`, `A3`, `X1`, `X3`.
+Twelve of the forty-two gates cannot be answered from source: `C3`, `K2`, `L1`, `L4`, `L5`, `M2`, `M3`, `IM1`, `A1`, `A3`, `X1`, `X3`.
 
 Capture at 1280x800 before any wider viewport.
 A hero that fits at 1440x900 and fails at 1280x800 is a real failure, because the smaller size is the common laptop.

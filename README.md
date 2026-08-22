@@ -12,9 +12,9 @@ Code blocks, quoted material, tables, and blockquotes are exempt.
 
 ## design-review
 
-Checks pages, components, decks, and artifacts against a catalog of AI-generated design tells, across thirty-one gates.
+Checks pages, components, decks, and artifacts against a catalog of AI-generated design tells, across forty-two gates.
 Findings come back by ID and severity with a fix written for the stack in use (plain HTML and CSS, React with Tailwind, or Webflow).
-Ten of the gates cannot be answered from source, so the skill renders the page with `chrome-devtools-axi` and judges the pixels; if it cannot render, it reports those gates as unchecked rather than passed.
+Twelve of the gates cannot be answered from source, so the skill renders the page with `chrome-devtools-axi` and judges the pixels; if it cannot render, it reports those gates as unchecked rather than passed.
 
 ## eod
 
