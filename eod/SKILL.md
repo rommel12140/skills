@@ -110,10 +110,15 @@ Rules on evidence, all of them `H1`:
 ## Procedure
 
 1. Read `references/corpus.md`, then `references/voice-rules.md`.
-2. Take what he gave you. Do not ask him anything he has already answered.
+2. Take what he gave you across the whole requested reporting day, including all available day-specific notes and accepted evidence, before selecting bullets.
+   Do not ask him anything he has already answered.
+   Keep the evidence limits above: do not reconstruct the day from commits or insert unaccepted findings.
 3. Drop anything that happened on a fixed recurring schedule and did not move (`R2`). Weekly planning is the standing example. Keep the recurring thing only where something actually changed state inside it, and then the bullet is about what changed, not about the ritual.
-4. Group the rest of the day into workstreams, at most four. Fold small items into the workstream they belong to.
-5. Order the workstreams by priority. Infer the order when it is obvious from what he said: what he spent the day on, what he led with, what he called out as the focus.
+4. Group the rest of the day into substantive workstreams before applying the four-bullet ceiling.
+   Fold small items into related work or omit them; separate tool events for the same outcome are not separate priorities.
+5. Rank the workstreams by his stated priorities, operational or business consequence, and substantial effort, then select up to four.
+   Include significant progress and important unfinished work with their actual completion qualifications.
+   Recency, easy completion, visual novelty, mention order and tool-event count do not establish importance.
 6. For each workstream, decide what his boss is being told: the named thing and its state. Where a note describes developer process, the mechanic comes out and the outcome goes in (`R1`). Product and tool names stay as he said them.
 7. Assemble the main outcome from his own phrasing. It names the centre of gravity and says what happened to it. It is not a summary of the bullets (`M1`). It carries the feeling and the tomorrow only if he gave them (`M2`, `M4`).
 8. Assemble the bullets in priority order, from his own phrasing (`B1`, `B2`).
@@ -124,14 +129,22 @@ Rules on evidence, all of them `H1`:
 Steps 7 and 8 say assemble rather than write on purpose.
 The sentences are already his. Your job is which ones go where, not how they read (`W1`).
 
-Steps 3 and 6 are the two his 4 August ruling added, and they are the only steps that decide what does not reach the page. Everything after them is assembly.
+Steps 3 and 6 are the two his 4 August ruling added.
+Steps 4 and 5 select the priorities from the whole day; everything after step 6 is assembly.
 
 Step 9 is the one the corpus added. The report's furniture is his too, not a house style you supply.
 
 ## Ordering
 
 The priority order is his call, not yours.
-Infer it, state it in one line under the report, and let him reorder:
+Infer it from the whole day using step 5, state it in one line under the report, and let him reorder.
+
+A minor cosmetic task, such as a small logo adjustment, must not displace substantive report workflows, task management, or important unfinished work.
+Fold it into related work or omit it unless he made it a main priority.
+Design work can be a main priority when his focus, its business consequence or the substantial work supports that; a logo is not automatically minor.
+Selection changes which notes reach the report, not their wording or completion state.
+
+For example:
 
 ```
 Order: ProfitsX Homepage first since that's where the day went, then Moving Scrubs, then Growth Engine, then the kitchen mockup. Say the word if you want it shuffled.
@@ -155,7 +168,10 @@ Run all of these. A failure is a rewrite, not a caveat.
 3. **Nothing recurring in the bullets** (`R2`). For each bullet, ask whether it happened because something moved or because it was Friday. Weekly planning never earns one.
 4. **Banned constructions** (`V2`). Walk the list in `references/voice-rules.md`.
 5. **Format** (`F1` to `F5`). Date is `M/D/YY` unpadded, ` - ` markers, no headers, no bold, no emoji, no tables. A bare URL is fine (`B7`).
-6. **No padding** (`F3`). Bullet count equals the number of priorities he actually reported, less anything `R2` took out.
+6. **Priority selection and no padding** (`F3`). Compare the bullets against all eligible workstreams from the requested day.
+   His priorities, consequence and substantial effort determine which ones earn up to four bullets.
+   No significant progress or important unfinished work was displaced by a minor cosmetic task, a recent completion or repeated tool events.
+   Fold small related items together and never pad to four.
 7. **Nothing invented** (`H1`). Every claim, number, link and completion traces to something he said or accepted. Restating a mechanic as an outcome under `R1` does not license a claim he did not make. If you cannot say what job it finished without guessing, ask below the report.
 8. **Unfinished stays unfinished** (`B3`).
 9. **Voice not raised** (`V4`). Contractions intact, short declarative runs and fragments not completed, separators after workstream names still varied (`B2`, `B5`).

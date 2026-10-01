@@ -1,6 +1,6 @@
 # Evals
 
-Eight cases.
+Nine cases.
 Each holds an input and what a correct pass must produce.
 
 These exist to answer one question: did editing the skill move it closer to the corpus or quietly further from it.
@@ -15,6 +15,7 @@ These exist to answer one question: did editing the skill move it closer to the 
 | `06-greeting-hyphens-and-three-bullets` | Notes for 28 July 2026, in his phrasing | Fidelity on a second shape. Greeting, trailing colon, leading whitespace, hyphen separators, three bullets, no tomorrow line. |
 | `07-url-and-defended-detour` | Notes for 29 July 2026, in his phrasing | Fidelity on a third shape. Greeting on the date line, inline unlabelled URL, a defended detour, `++` and `+` constructions. |
 | `08-boss-not-a-developer` | A Friday's notes, real work described in developer process terms, plus the weekly planning | That the report is written for his boss. Developer process comes out (`R1`) and the recurring planning never reaches a bullet (`R2`). |
+| `09-priority-selection` | Two fictional days: a busy operational day and a design-focused day | Whole-day selection keeps substantive and unfinished work ahead of a minor cosmetic task, while preserving a legitimate design priority. |
 
 Cases 01, 05, 06, 07 and 08 are the ones that matter most.
 
