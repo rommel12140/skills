@@ -1,6 +1,6 @@
 # Evals
 
-Six cases.
+Eight cases.
 Each holds an input and what a correct pass must produce.
 
 These exist to answer one question: did editing the skill make it better or quietly worse.
@@ -12,11 +12,15 @@ These exist to answer one question: did editing the skill make it better or quie
 | `03-planted-defaults` | A draft page plan carrying planted failures | Recall. Every planted gate ID must fail. |
 | `04-false-attribution` | A request to state what Awwwards requires | That recommendations are never attributed to Awwwards or a studio (`W13`). |
 | `05-missing-evidence` | A brief that asks for numbers and testimonials it cannot support | That gaps become dependencies and nothing is fabricated (`W7`). |
-| `06-plain-structure-passes` | A sound plan that uses familiar structures | False positives. No gate may fail for plainness or lack of novelty. |
+| `06-plain-structure-passes` | Familiar supporting structures with a substantial product signature | Preserve plain tables and controls while requiring narrative motion. |
+| `07-flat-persuasion` | A static product page with token hover and progress effects | Fail missing signature and motion coverage even when accessibility and anti-slop checks pass. |
+| `08-ambitious-accessible` | A substantial product scene with supplied fallback and performance evidence | Accept ambitious motion without flattening it; reject broken alternate versions. |
 
-Cases 03 and 06 matter most.
+Cases 03, 06, 07 and 08 cover the main regressions.
 03 proves the gates catch what they claim to catch.
-06 proves the skill does not demand novelty for its own sake: a comparison table, plain paragraphs and ordinary controls are valid answers when they fit, and a skill that marks them down will push builds toward ornament.
+06 protects useful comparison tables and ordinary controls within an authored motion direction.
+07 prevents that protection from excusing an entirely flat persuasion page.
+08 protects substantial 3D and type choreography when the supplied evidence supports their usability and performance.
 
 ## Running a case
 
@@ -43,7 +47,9 @@ Fabrication and attribution errors fail a run outright, whatever else it got rig
 
 ## Dry runs at creation
 
-Cases 02 and 03 were run once and case 06 twice, each by a fresh agent with only the skill loaded, while the skill was being written.
+Before the motion revision, cases 02 and 03 were run once and the old case 06 twice, each by a fresh agent with only the skill loaded, while the skill was being written.
 02 declined all three overruled requests and built the alternatives.
 03 failed every planted gate.
-06 failed no structure or novelty gate on either run; each run found specification gaps in the plan itself, which were fixed in the input.
+The old 06 failed no structure or novelty gate on either run; each run found specification gaps in the plan itself, which were fixed in the input.
+Those historical runs do not validate the revised motion contract.
+See [motion revision validation](../../design-review/evals/motion-validation.md) for the current checks and their limits.

@@ -18,6 +18,12 @@ They generalize recurring failure patterns without reproducing private projects 
 | [Context fit](cases/10-context-fit/input.md) | Reject an industry motif that obstructs the actual task |
 | [Quiet sign-in](cases/11-task-focused-login/input.md) | Compose the requested task without unnecessary product promotion |
 | [Award and type claims](cases/12-evidence-and-typography/input.md) | Separate official criteria, measured evidence and recommendations |
+| [Flat persuasion](cases/13-flat-persuasion/input.md) | Fail token motion despite clean semantics and no banned decoration |
+| [Ambitious accessible motion](cases/14-ambitious-accessible/input.md) | Preserve substantial 3D and type with authored alternate versions and supplied performance evidence |
+| [Visual replacement](cases/15-visual-replacement/input.md) | Replace unverified dominant imagery with equally strong honest art direction |
+
+The subject-led build case also requires the new motion minimum.
+See [motion revision validation](motion-validation.md) for executed checks and untested scope.
 
 ## Run a case
 

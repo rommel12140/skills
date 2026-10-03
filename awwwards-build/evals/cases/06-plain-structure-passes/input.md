@@ -15,8 +15,17 @@ Run the source-checkable gates in `references/acceptance.md` against this plan.
 > 4. Care: a short numbered list of the four seasoning steps, because order matters, with one photo of the oil being wiped in.
 > 5. Footer: delivery, returns and contact.
 >
-> Motion: section 2's cutaway photo slides the cut face into view once as the section enters, holding still afterwards; reduced motion shows the final frame.
-> The table has no animation.
+> Signature: the opening's full-width side profile becomes the cutaway in section 2, exposing the thickness that the argument is about.
+> The pan holds its position as its exterior mask opens across the frame; the image scale changes from whole pan to the base detail while the measured thickness label enters beside the cut face.
+> The first handoff introduces the material; the later cutaway state explains why its mass matters, then releases into ordinary reading flow.
+> Motion levels: opening signature, section 2 narrative, size table still, care still, footer responsive links.
+> 3D decision: use registered owned photographs and a controlled mask, because the actual surface and cut face are stronger evidence than an invented model; no WebGL needed for this concept.
+> The native-scroll scene spans 1.5 desktop viewport heights, maps directly to progress, reverses to the same states, and has a visible "Choose a size" anchor throughout.
+> On phones the same image-to-detail relationship uses a shorter crop transition without pinning.
+> Reduced motion shows the exterior and cutaway together in normal flow; JavaScript or image failure leaves the caption, spec and size action available.
+> Prototype budget: 60fps on the chosen test phone, 600KB for the paired photos, no ongoing rendering when settled or offscreen.
+> Buttons use immediate focus and 160ms color feedback, with no moving hit areas.
+> The table has no narrative animation.
 > Buttons: contained, 48 px tall, the same silhouette in every row, with a visible focus ring.
 > Loading: prices come from the shop API; the table renders with skeleton cells at the real column widths until they arrive.
 > If the price request fails or times out after ten seconds, the price cells read "Price unavailable" with one "Load prices again" button for the table, and the other columns stay visible.

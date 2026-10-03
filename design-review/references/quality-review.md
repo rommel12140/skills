@@ -35,7 +35,8 @@ Do not create a pseudo-precise composite score.
 | Composition | Dominance, balanced density, common edges and purposeful rhythm | Everything has equal weight, or whitespace conceals missing proof |
 | Imagery | Real subject, strong crop, consistent treatment, legible overlays | Missing, dirty, unrelated or poorly framed imagery |
 | Surfaces | Clear layers and controls, deliberate states and restrained separators | Bare-text actions, excessive rules, arbitrary stripes or oversized panels |
-| Motion | It explains a relationship and remains coherent in intermediate states | Repeated reveal effects, delayed context, dead controls or jumpy reversal |
+| Motion | A brand-derived signature, composed opening and later transformation, deliberate section levels, coherent intermediate states | Flat persuasion page, token hovers posing as a signature, repeated reveals, delayed context, dead controls or jumpy reversal |
+| Spatial and material craft | Depth, lighting, image treatment or kinetic type makes the subject tangible, with a strong alternate version | Arbitrary rotating object, generic shader wallpaper, absent dominant visual after evidence removal, or discarded mobile art direction |
 | Responsive design | The idea is recomposed for a phone and varied content | Desktop mechanics shrink, disappear, clip or create a long scroll trap |
 | Usability | The main journey is understandable without explanation | Essential information appears only on hover or after an effect completes |
 | Delivery | Fast useful rendering, stable layout, complete states and recovery | Font flashes, broken links, console failures or indefinite loaders |
@@ -72,6 +73,9 @@ When an external limitation prevents a check, mark it unchecked and describe the
 
 ### Interaction and motion
 
+- Confirm the signature is perceptible in the dominant composition at desktop and phone sizes, not merely named in a plan.
+- Check the opening or first handoff and a later narrative transformation against the page's motion levels.
+- Verify the 3D/shader decision and equally strong replacement for any removed dominant visual.
 - Complete the primary journey with mouse, keyboard and touch where available.
 - Check first and repeated hover, interrupted animation, rapid open/close, back/forward and direct anchors.
 - Inspect entry, intermediate, settled and reverse frames of significant motion.
@@ -114,7 +118,8 @@ A Lighthouse navigation run does not measure field INP; its TBT can indicate int
 If there is no field sample or physical phone, say so.
 Do not describe desktop emulation as measured real-phone performance.
 
-Set a page-specific asset and rendering budget after measuring the representative slice.
+Set a page-specific asset and rendering budget before building the signature, then tune it against the representative slice.
+Use the starting budgets and degradation order in [WebGL craft](webgl.md#performance-and-accessibility-budget).
 Record initial JS, fonts, hero media, deferred media and the largest interaction cost.
 Prefer a useful first render with deferred enhancement to a long custom loading sequence.
 If the budget fails, identify the dominant cost and optimize it while preserving the chosen visual effect.

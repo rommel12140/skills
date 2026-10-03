@@ -22,7 +22,10 @@ Separate supplied facts from assumptions and unavailable material.
 Do not turn ordinary design choices into a long interview.
 Ask only when a missing fact changes the concept or makes the result untruthful.
 Keep building independent parts while a required fact is pending.
-If assets are missing, use an honest representative asset or explicitly marked draft state; do not invent testimonials, client work or outcomes.
+If assets are missing, develop an equally strong honest visual treatment: owned photography with a specific shot direction, an original 3D construction, a generated illustration, or composed kinetic type.
+Record subject, source, intended crop, visual role and fallback.
+Generated imagery can illustrate an idea; it cannot stand in for a real customer, product test, completed project or testimonial.
+Removing unsupported proof must strengthen the art direction around the remaining evidence, not empty the hero.
 A final candidate cannot depend on placeholders that disguise missing proof.
 
 ## Derive a visual language
@@ -57,7 +60,8 @@ A useful direction specifies:
 - Display, body, UI and numeric type roles.
 - Surface, ink, accent and status color roles.
 - The opening composition and the sequence of proof.
-- A signature behavior if it improves the experience, plus the sections that stay still.
+- One signature moment tied to the brand's object, material, process or type, plus a motion level for every section.
+- A 3D/shader decision: what depth or material would communicate, which mechanism fits, and what preserves the idea on a phone or without WebGL.
 - How it changes on small screens and with reduced motion.
 
 Reject a direction whose description consists only of style adjectives.
@@ -84,11 +88,12 @@ Use whitespace to group and pace actual content, not to conceal its absence.
 ## Prove the system in a browser
 
 Build the hero, one representative content section, a control and their transition with real words and intended assets.
+Include the signature's entry, transformation and release in this first slice, following [motion](motion.md).
 The representative section must contain the hardest content, not only the shortest heading.
 Include a long title, realistic metadata and a loading or error state if this is an application.
 
 Review that slice at 1280x800, a larger desktop and a phone viewport.
-Check type texture, wrapping, image crop, usable controls and the first impression without animation.
+Check type texture, wrapping, image crop, usable controls and the first impression both in motion and in the authored static alternative.
 If the direction fails here, change the system before repeating it throughout the site.
 A moodboard or static mockup can help choose a direction; it does not replace this check.
 

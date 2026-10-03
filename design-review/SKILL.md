@@ -39,7 +39,10 @@ A request for review alone is not permission to rebuild, deploy or publish.
 
 In every mode, load the [design-tells catalog](references/design-tells.md).
 For Build, read [the build playbook](references/build-playbook.md), [typography](references/typography.md), and [layout and surfaces](references/layout-and-surfaces.md).
-Read [motion](references/motion.md) before changing any animation or transition.
+For every web Build, read [motion](references/motion.md), including its signature and minimum-motion requirements.
+Read it in Refine or Audit when judging or changing animation or transitions.
+Use [motion recipes](references/motion-recipes.md) for GSAP, Lenis, kinetic type, hover and route implementation, and [WebGL craft](references/webgl.md) for Three.js, React Three Fiber, shaders and rendering budgets.
+Read [motion research](references/motion-research.md) when choosing a mechanism from award winners or explaining its provenance.
 For Refine, load the relevant craft reference and the preservation rules in the playbook.
 For Audit, read [the quality review](references/quality-review.md) and the catalog, then load the craft reference for each weak area.
 Read [award research](references/award-research.md) when selecting a direction or explaining the bar.
@@ -57,6 +60,7 @@ Use [stack-specific fixes](references/fixes-by-stack.md) for catalog findings.
   Identify a specific form, object, process, image treatment or typographic behavior that earns its place.
   An industry association alone does not justify an ornament.
 - Keep the existing bans: decorative glowing networks, halos, pulsing dots, generic gradient meshes, floating glass, neon-on-dark atmosphere, equal icon-topped feature triplets, emoji iconography, and universal fade-up reveals.
+  Pair every removed default with a stronger subject-derived composition or behavior using [the replacement table](references/motion.md#stronger-alternatives-to-the-banned-defaults).
 - Do not add decorative numbered labels or invented pseudo-technical codes.
   Genuine data, ordered steps and useful reference navigation retain their meaning; never manufacture numbering to make a persuasion page look designed.
 - Keep buttons recognizable as buttons.
@@ -64,7 +68,9 @@ Use [stack-specific fixes](references/fixes-by-stack.md) for catalog findings.
   Use layout-matched skeletons for content loading and preserve meaningful failure and recovery states.
 - Each narrative animation performs its section's argument and differs from the preceding animated section.
   Keep a consistent motion character and repeated control behavior.
-  Sections with nothing to explain through motion stay still.
+  Plan a signature moment and a motion level for every section.
+  Still sections create reading intervals around the signature; they do not excuse a flat persuasion page.
+  Keep operational and reference pages focused on their tasks, and honor explicit static briefs and reduced-motion preferences.
 - Match layout to the job.
   Persuasion needs an argument and proof; reference needs retrieval; an application needs visible state and an obvious next action.
 - Preserve what the user already likes.
@@ -77,15 +83,19 @@ Use [stack-specific fixes](references/fixes-by-stack.md) for catalog findings.
 
 1. Establish the reader, task, primary action, proof, assets, constraints and protected baseline.
    Read before asking for missing information; proceed on reversible choices with stated assumptions.
-2. Write a short direction in working notes: page argument, visual source, type roles, color roles, composition and the one interaction worth remembering if the job needs one.
-   Include what stays still and how the mobile version works.
+   Replace removed unverified visual material with equally strong verified imagery or an original illustrative treatment, without presenting generated material as factual proof.
+2. Write a short direction in working notes: page argument, visual source, type roles, color roles, composition and signature moment.
+   Specify one brand-derived signature moment, motion levels per section, the 3D or shader decision, and the mobile and reduced-motion versions.
+   For persuasion pages, require an expressive opening or first handoff, a later narrative transformation, and consistent control feedback.
+   A progress line and small hover effects alone do not meet this bar.
 3. Inspect relevant reference behavior in a browser.
    Describe the mechanism and why it fits before borrowing it.
    Reference images and source inspection do not prove timing, usability or smoothness.
 4. Build a representative slice with real copy, intended fonts, the actual visual material where relevant and working controls.
+   Prototype the signature motion and its transition to the next section in that slice, with asset and frame budgets.
    Check the hero, a content section and their handoff at 1280x800 and on a phone viewport before repeating the system across the page.
 5. Finish all requested sections, routes and states.
-   Integrate motion after the static hierarchy works, then refine layout and motion together.
+   Keep semantic content useful from the first render, then refine layout and motion together from the moving prototype.
    Do not hide missing content behind animation or loaders.
 6. Run the self-check, correct faults, and rerun the affected checks.
    Repeated corrections become explicit regression checks against the actual rejected state.

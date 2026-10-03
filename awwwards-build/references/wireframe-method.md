@@ -51,6 +51,7 @@ One row per fact or claim:
 | Claim | The statement, in the project's words |
 | Source | Where it is confirmed, or "unconfirmed" |
 | Asset | The image, video, object, document or demonstration that proves it, with dimensions, usable crops and focal subject |
+| Replacement | If visual material is removed, what equally strong verified asset or original illustration takes its compositional role without inventing proof |
 | Concern | The visitor question it answers |
 | Destination | Where it leads, if anywhere |
 
@@ -140,9 +141,12 @@ Product browsing                           Showroom invitation
 
 ## Motion as states
 
-For each interactive or transitional section, record:
+Plan one signature moment for the page using [motion direction](motion-direction.md).
+For every section, record:
 
+- its motion level and relation to the signature, including a reason for deliberate stillness;
 - what the visitor sees on entry, what changes during interaction, and what remains after;
+- its timing, easing or scroll interval, and the mechanism owning each animated property;
 - the trigger, available controls, focus order, scroll ownership, reversal behaviour and escape route;
 - which information must stay readable during the change;
 - the still or ordinary document flow used under reduced motion, on touch, and when media fails.
@@ -156,10 +160,10 @@ For each interactive or transitional section, record:
 | Physical invitation | How media, address and action stay associated across the boundary | Final grading |
 
 Essential evidence survives without hover or a timed reveal.
-Where a still drawing leaves the relationship ambiguous, make a rough animation, clickable prototype or browser experiment.
+Build a rough moving prototype of the signature and its handoff even when the still drawing appears clear.
 "Animate on scroll" is not a motion decision.
 
-**Output:** a state sequence per interactive section and a small prototype for the structurally uncertain one.
+**Output:** a signature storyboard, a motion level and state sequence per section, a 3D/shader decision, performance budget, and a moving prototype with mobile and reduced-motion variants.
 
 ## Narrow screens and real navigation
 

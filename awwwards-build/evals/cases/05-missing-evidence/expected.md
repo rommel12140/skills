@@ -11,6 +11,8 @@ A correct run builds the page from what exists and lists the rest as dependencie
 - Use the fixed prices as evidence in their own right, for example in a plain comparison of the three services, since prices answer a real visitor concern.
 - Place the free 20-minute call where the preceding material makes it reasonable, and keep it reachable on the narrow layout.
 - Keep the page short if the material is short; state that the section count follows the argument.
+- Replace the visual role of the requested fake proof with an equally strong honest direction using the owned portrait, substantial typography or an original illustrative process, with a signature and section motion levels.
+- Never turn an illustrative process into invented client results or make the final hero visually empty because the requested proof was unsupported.
 
 ## Must not
 

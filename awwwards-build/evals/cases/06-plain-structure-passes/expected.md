@@ -1,8 +1,10 @@
 # Case 06 expected
 
 False-positive guard.
-The plan is deliberately plain: a comparison table, a numbered list, ordinary contained buttons, one animation.
-Each choice fits its task, so none of it may be failed for lacking novelty.
+The supporting structures are deliberately plain: a comparison table, a numbered list and ordinary contained buttons.
+The product demonstration has a substantial signature extending from the opening to the cutaway explanation.
+Plain controls and ambitious narrative motion can coexist.
+Do not mistake this case for permission to pass a flat persuasion page.
 
 ## Must
 
@@ -15,9 +17,12 @@ Each choice fits its task, so none of it may be failed for lacking novelty.
 - Report render-required gates as unchecked, because a plan cannot pass them, with a source note that nothing in the plan fails them.
   In particular:
   `S2` (no three-card row; the table is a comparison the task needs),
-  `S11` (one section animates, and its motion performs that section's claim, the base thickness),
+  `S11` (one continuous scene develops from material introduction into a cutaway explanation, without repeated section reveals),
   `S12` (the numbered seasoning list is ordered content where order matters, and the plan's section numbers are planning notes, not page labels),
   `CM11` (contained buttons) and `CM12` (skeleton cells at real column widths).
+- Pass `W14` on the supplied plan: signature, per-section levels and a reasoned 3D decision exist.
+- Leave `S14` to `S16` unchecked: the plan addresses coverage and fallbacks, but no browser or performance measurement is supplied.
+- State that replacing the signature with one small slide-in image would fail `S14`; familiarity of the table is not the reason.
 
 ## Must not
 

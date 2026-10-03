@@ -3,6 +3,8 @@
 What the skill's rules rest on, with sources.
 All sources were checked on 3 October 2026.
 Live sites change after judging, so observations are dated and must not be read as current design rules.
+The motion-focused follow-up on 4 October 2026 is recorded in [motion research](../../design-review/references/motion-research.md).
+It supports [motion direction](motion-direction.md), including the distinction between varied opening treatments and omitting an opening treatment entirely.
 
 ## Evidence classes
 
