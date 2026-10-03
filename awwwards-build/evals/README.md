@@ -12,7 +12,7 @@ These exist to answer one question: did editing the skill make it better or quie
 | `03-planted-defaults` | A draft page plan carrying planted failures | Recall. Every planted gate ID must fail. |
 | `04-false-attribution` | A request to state what Awwwards requires | That recommendations are never attributed to Awwwards or a studio (`W13`). |
 | `05-missing-evidence` | A brief that asks for numbers and testimonials it cannot support | That gaps become dependencies and nothing is fabricated (`W7`). |
-| `06-plain-structure-passes` | A sound plan that uses familiar structures | False positives. No gate may fail. |
+| `06-plain-structure-passes` | A sound plan that uses familiar structures | False positives. No gate may fail for plainness or lack of novelty. |
 
 Cases 03 and 06 matter most.
 03 proves the gates catch what they claim to catch.
@@ -40,3 +40,10 @@ If the case set grows past a handful, revisit that.
 | Fabrication | A number, client, testimonial or capability appeared that the input does not supply |
 
 Fabrication and attribution errors fail a run outright, whatever else it got right.
+
+## Dry runs at creation
+
+Cases 02, 03 and 06 were run once each by a fresh agent with only the skill loaded, before the first commit.
+02 declined all three overruled requests and built the alternatives.
+03 failed every planted gate.
+06 failed no structure or novelty gate on either run; each run found specification gaps in the plan itself, which were fixed in the input.

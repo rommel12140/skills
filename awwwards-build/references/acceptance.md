@@ -8,6 +8,7 @@ Attach evidence to every gate: a marked wireframe, a section brief, an asset sou
 "Not applicable" needs a reason tied to the page or component's job.
 A gate marked `render: required` is judged from the rendered page through `chrome-devtools-axi`, at 1280 by 800 and at a narrow touch viewport.
 If the page cannot be rendered, report that gate as unchecked; never as passed.
+Over a plan or source alone, a render-required gate can fail when the plan states the defect outright ("every section fades in and slides up"), but it cannot pass: report it unchecked with a note on what the source shows.
 
 No score.
 Close the report with the count of failed and unchecked gates.
