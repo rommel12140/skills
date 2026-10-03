@@ -9,8 +9,8 @@ description: >
   navigation, tabs, cards, tags, tooltips, modals, drawers, tables, skeletons,
   empty and error states, custom cursors) from a brief. Produces a page argument,
   section briefs, desktop and narrow wireframes, a component specification, the
-  built page, and pass or fail acceptance evidence. To audit finished work for
-  AI-generated design tells, fonts, or motion, use design-review instead.
+  built page, and pass or fail acceptance evidence. For general page builds,
+  visual polish, template adaptation, refinement, or audits, use design-review.
 ---
 
 # awwwards-build
@@ -27,14 +27,16 @@ This skill makes an agent take those decisions in order and leave evidence for e
 
 | Situation | Use |
 | --- | --- |
-| A brief exists and the page, its sections, or its components do not | `awwwards-build` |
-| A page structure exists but a section or component set has to be designed or rebuilt | `awwwards-build`, from the stage that is missing |
-| Work exists and the question is whether it defaulted to AI-generated design tells, generic type, or decorative motion | `design-review` in audit mode |
-| Finishing a build from this skill | Run this skill's acceptance gates, then `design-review` in audit mode over the rendered result |
+| The deliverable is a wireframe, a section sequence, or a page structure decided from a brief | `awwwards-build` |
+| The deliverable is a component system or a component specification | `awwwards-build` |
+| A page structure exists but a section or component set has to be redesigned | `awwwards-build`, from the stage that is missing |
+| A page build whose structure is settled, visual polish, template adaptation, or a scoped refinement | `design-review` in Build or Refine |
+| Existing work needs review | `design-review` in Audit |
+| Finishing a build from this skill | Run this skill's acceptance gates, then `design-review` in Audit over the rendered result |
 
-This skill decides what to make and proves it works.
-`design-review` decides whether what was made looks machine-made.
-They overlap on motion and visual language; when they disagree on a visual tell, `design-review` is the authority, and when they disagree on structure or component behaviour, this skill is.
+This skill decides structure and component behaviour, and proves they work.
+`design-review` owns art direction, typography, motion craft and the catalog of AI-generated design tells, and audits what this skill produces.
+When they disagree on a visual tell, type or motion craft, `design-review` is the authority; when they disagree on structure or component behaviour, this skill is.
 
 ## Three kinds of evidence
 
