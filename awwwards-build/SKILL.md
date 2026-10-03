@@ -1,16 +1,16 @@
 ---
 name: awwwards-build
 description: >
-  Wireframe a web page, design its sections, and build its interface components
-  to an Awwwards Site of the Day standard in one pass. Use when asked to make,
-  plan, or rebuild a marketing site, portfolio, studio, product, or landing page
-  "at Awwwards level", or to decide a page's structure and section sequence, or
-  to build its components (buttons, links, fields, selection controls, forms,
-  navigation, tabs, cards, tags, tooltips, modals, drawers, tables, skeletons,
-  empty and error states, custom cursors) from a brief. Produces a page argument,
-  section briefs, desktop and narrow wireframes, a component specification, the
-  built page, and pass or fail acceptance evidence. For general page builds,
-  visual polish, template adaptation, refinement, or audits, use design-review.
+  Wireframe a web page, design its sections, and specify and build its interface
+  components to an Awwwards Site of the Day standard in one pass. Use when a
+  page has to be planned from a brief before it is built: its argument, section
+  sequence, section briefs and desktop and narrow wireframes. Also use when the
+  deliverable is a component system or component specification (buttons, links,
+  fields, selection controls, forms, navigation, tabs, cards, tags, tooltips,
+  modals, drawers, tables, skeletons, empty and error states, custom cursors).
+  Produces the plan, the build, and pass or fail acceptance evidence. For page
+  builds whose structure is settled, visual polish, template adaptation,
+  refinement, or audits, use design-review.
 ---
 
 # awwwards-build
