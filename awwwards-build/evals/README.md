@@ -43,7 +43,7 @@ Fabrication and attribution errors fail a run outright, whatever else it got rig
 
 ## Dry runs at creation
 
-Cases 02, 03 and 06 were run once each by a fresh agent with only the skill loaded, before the first commit.
+Cases 02 and 03 were run once and case 06 twice, each by a fresh agent with only the skill loaded, while the skill was being written.
 02 declined all three overruled requests and built the alternatives.
 03 failed every planted gate.
 06 failed no structure or novelty gate on either run; each run found specification gaps in the plan itself, which were fixed in the input.
