@@ -1,7 +1,7 @@
 # skills
 
 Three agent skills: one for prose, one for interface work, one for the daily report.
-The first two run either as a constraint before the work is made, or as an audit over work that already exists.
+The writing skill supports constraints and audits; the design skill supports building, scoped refinement and audits.
 
 ## copy-review
 
@@ -12,9 +12,11 @@ Code blocks, quoted material, tables, and blockquotes are exempt.
 
 ## design-review
 
-Checks pages, components, decks, and artifacts against a catalog of AI-generated design tells, across thirty-one gates.
-Findings come back by ID and severity with a fix written for the stack in use (plain HTML and CSS, React with Tailwind, or Webflow).
-Ten of the gates cannot be answered from source, so the skill renders the page with `chrome-devtools-axi` and judges the pixels; if it cannot render, it reports those gates as unchecked rather than passed.
+Designs, builds, refines and audits websites and interfaces against an Awwwards standard of art direction, typography, motion, usability and execution.
+Its catalog of AI-generated design tells remains the floor, with a build playbook, primary-source award research, craft references, worked examples and regression evals above it.
+Refinement preserves accepted work, while reviews return concrete findings and stack-appropriate fixes.
+Rendered checks use `chrome-devtools-axi` when available; source-only work leaves visual and motion judgments explicitly unchecked.
+The skill also applies relevant checks to static artifacts, and never promises an award or reports a synthetic quality score.
 
 ## eod
 
@@ -42,7 +44,8 @@ npx skills add rommel12140/skills --skill eod -g
 
 `copy-review` and `design-review` read a project's `voice.md` before their own catalogs and treat it as authoritative.
 Copy `voice.template.md` into the root of a project as `voice.md` and fill it in, leaving any section empty rather than guessing.
-Without it the skills still run on the global catalog alone, and they say so in their output; `design-review` reports gate `X1` as skipped, since it has nothing to check the visual language against.
+Without it the skills still run and disclose the missing project voice.
+`design-review` reports gate `X1` as unchecked, proceeds with explicit assumptions, and uses the supplied brief and accepted baseline for the broader context review.
 
 `eod` does not read `voice.md`.
 A `voice.md` scopes one project's outward copy, and an EOD is neither outward copy nor scoped to one project: one day of the corpus alone covers four.

@@ -1,9 +1,13 @@
 # Design tells
 
-Thirty-one entries in eleven categories.
+The original stable IDs are retained; component affordance and loading gates extend the catalog.
+This catalog catches defaults and defects; use `quality-review.md` for the positive design bar.
 Every entry has a stable ID, a severity, whether it needs a rendered page, and a gate phrased so that an affirmative answer fails.
 
 Stack-specific fixes live in `fixes-by-stack.md`, keyed by the same IDs.
+Apply gates in the current brief and accepted design context.
+Record a deliberate, supported existing choice as an accepted exception rather than deleting it.
+A gate firing identifies a decision to inspect, not proof that a particular font or layout can never work.
 
 ## Severity
 
@@ -26,7 +30,7 @@ Stack-specific fixes live in `fixes-by-stack.md`, keyed by the same IDs.
 | CP | Copy and microcopy in UI | upstream |
 | IM | Imagery | upstream |
 | A | Accessibility and contrast | hallmark |
-| X | Context fit | the captain's own rules |
+| X | Context fit | project-fit rules |
 
 ---
 
@@ -38,12 +42,16 @@ Gate: Is the display or heading font Inter, Roboto, Open Sans, Poppins, Lato, Mo
 Detect: `font-family` declarations, `@font-face` sources, Google Fonts links, Webflow font settings.
 Why: these are the fonts that appear when nobody chose a font.
 Instead: pick a display face with a point of view and pair it with a body face that stays readable at small sizes.
+Exempt: a brief-mandated or accepted existing type system; record the exception and review hierarchy and execution rather than replacing the identity.
+A common face used for body or UI text alone does not trigger this display-font gate.
 
 ### T2 - One face at every size - P1 - render: no
 
 Gate: Does the page use a single typeface for display, body, and interface text with no pairing?
 Why: it flattens the hierarchy and removes the strongest available signal of intent.
-Instead: a display and body pairing at minimum. Optionally a third for interface or monospace detail.
+Instead: establish distinct display, body and interface roles, normally with a deliberate display/body pairing.
+Exempt: an explicitly chosen single-family system whose cuts, weight, width, scale and spacing create demonstrated role contrast in the render.
+Do not add a second face solely to satisfy the gate.
 
 ### T3 - Italic display type - P2 - render: no
 
@@ -61,7 +69,8 @@ Instead: use weight, size, or colour for hierarchy.
 Gate: Does the page contain a linear gradient running from a purple or indigo to a blue, on a hero, a button, or a background?
 Detect: `linear-gradient` declarations, gradient fills in Webflow, gradient utility classes.
 Why: it is the single most recognisable machine-design signature.
-Instead: a flat colour drawn from the project's own palette. If a gradient is genuinely wanted, take both stops from the brand and keep the hue travel short.
+Instead: a flat colour drawn from the project's own palette.
+If a gradient is genuinely wanted, take both stops from the brand and keep the hue travel short.
 
 ### C2 - Untouched component-library palette - P0 - render: no
 
@@ -74,11 +83,13 @@ Instead: define the palette in tokens first, then let the components read from i
 
 Gate: Does the page use abstract gradient-mesh backgrounds, floating blurred colour blobs, or neon accents on a dark field as atmosphere?
 Why: decoration with no relationship to the page's subject.
-Instead: if the background needs to do something, let it do something the content needs. Otherwise leave it flat.
+Instead: if the background needs to do something, let it do something the content needs.
+Otherwise leave it flat.
 
 ### C4 - Colour declared outside the tokens - P1 - render: no
 
-Gate: Is any colour value declared outside the design token layer? Hex, `rgb()`, `hsl()`, or `oklch()` sitting inline or in a component file.
+Gate: Is any colour value declared outside the design token layer?
+Hex, `rgb()`, `hsl()`, or `oklch()` sitting inline or in a component file.
 Why: it is how a palette drifts, and it makes theming impossible.
 Instead: add the value to the token set and reference it.
 
@@ -90,14 +101,18 @@ Instead: add the value to the token set and reference it.
 
 Gate: Is the hero a centred column: eyebrow, centred headline, centred subhead, one or two centred buttons?
 Why: it is the default hero, chosen by nothing.
-Instead: break the axis. Set the headline left with the supporting text in a narrow second column, or lead with an image, a quote, or a number.
+Instead: break the axis.
+Set the headline left with the supporting text in a narrow second column, or lead with an image, a quote, or a number.
 
 ### L2 - Three equal-width icon-topped cards - P0 - render: no
 
 Gate: Does any section render three sibling cards of equal width where each one opens with an icon?
-Detect: a grid with exactly three children sharing a class, each containing an `svg` or icon component above a heading. Search for `grid-cols-3` near a repeated card class.
+Detect: a grid with exactly three children sharing a class, each containing an `svg` or icon component above a heading.
+Search for `grid-cols-3` near a repeated card class.
 Why: it is the training distribution's default feature section.
-Instead: break the row. Unequal spans, a numbered list with hanging numerals, or one annotated screenshot carrying all three claims.
+Instead: break the row.
+Unequal spans, a list led by meaningful headings, or one annotated screenshot carrying the claims.
+Do not replace generic cards with decorative numbering.
 
 ### L3 - The full default page shape - P0 - render: no
 
@@ -108,7 +123,8 @@ Instead: decide what the page has to prove, then order the sections so each one 
 ### L4 - Hero content below the fold - P1 - render: yes
 
 Gate: At 1280x800, is any of the hero's essential content (headline, primary action) below the fold?
-Why: 1280x800 is the common laptop, and heroes are routinely tuned at 1440x900 where the problem is invisible.
+Why: a smaller laptop viewport exposes failures hidden by a taller desktop preview.
+Treat 1280x800 as a required regression viewport, not a claim about the audience's device distribution.
 Instead: reduce the vertical padding, shrink the display size, or move the action up.
 
 ---
@@ -119,25 +135,45 @@ Instead: reduce the vertical padding, shrink the display size, or move the actio
 
 Gate: Do all surfaces carry the same corner radius and the same shadow, typically a large radius with a soft large shadow?
 Why: no radius or elevation hierarchy means every element claims the same importance.
-Instead: build a radius scale and an elevation scale, then assign by role. Flat for structure, raised for the thing that lifts.
+Instead: build a radius scale and an elevation scale, then assign by role.
+Flat for structure, raised for the thing that lifts.
 
 ### K2 - Reflexive glassmorphism - P0 - render: yes
 
 Gate: Does the page use frosted or translucent panels with backdrop blur where a solid surface would work?
 Why: it is applied as a style rather than to solve a layering problem, and it usually costs contrast.
-Instead: a solid surface. Reserve blur for cases where content genuinely passes behind the panel.
+Instead: a solid surface.
+Reserve blur for cases where content genuinely passes behind the panel.
 
 ### K3 - Icon in a rounded-square chip - P1 - render: no
 
 Gate: Are icons wrapped in a rounded square or circle with a tinted background?
 Why: it is the stock feature-card ornament.
-Instead: set the icon inline with the text, at text size, or remove it. Most of these icons carry no meaning.
+Instead: set the icon inline with the text, at text size, or remove it.
+Most of these icons carry no meaning.
 
 ### K4 - Colour-accent border cards - P1 - render: no
 
 Gate: Do cards or callouts carry a coloured left or top border as their only distinguishing mark?
 Why: it substitutes a stripe for a design decision.
-Instead: distinguish by surface, spacing, or type. If the colour carries status, pair it with a label so it is not the only signal.
+Instead: distinguish by surface, spacing, or type.
+If the colour carries status, pair it with a label so it is not the only signal.
+
+### K5 - Actions lose their button affordance - P1 - render: yes
+
+Gate: Have actions that should be recognizable buttons become bare text, ambiguous labels, or visually indistinguishable from adjacent metadata?
+Why: removing the control's shape to make a page minimal makes the task harder to recognize.
+Instead: retain the established solid, outline or otherwise clearly button-like treatment; refine size, padding, hierarchy and states.
+Check: default, focus, pressed, disabled and loading, on desktop and phone.
+A real inline navigation link is not a failed button.
+
+### K6 - Content loading has no matching structure - P1 - render: yes
+
+Gate: Does content loading replace the final layout with a bare message or unrelated spinner, cause avoidable layout jumps, or conceal failure indefinitely?
+Why: loading is part of the designed experience and must reflect the actual state.
+Instead: use layout-matched skeletons, a stable page shell, one truthful status, and distinct empty/error/retry states.
+Exempt: a brief session check before the content layout is known may use an appropriate branded status animation without a fabricated delay.
+Check: fast, slow, failed and partial responses, plus reduced motion.
 
 ---
 
@@ -159,7 +195,9 @@ Instead: exclude the focus ring from transitions.
 
 Gate: Does the page use thin lines with glowing circle nodes, connected-dot networks, halos, or pulsing dots as decoration?
 Why: it is generic technology iconography that means nothing about this product.
-Instead: draw the real thing. If a system is being shown, draw the system. If nothing needs drawing, leave it out.
+Instead: draw the real thing.
+If a system is being shown, draw the system.
+If nothing needs drawing, leave it out.
 
 ---
 
@@ -174,7 +212,8 @@ Instead: a real icon set, or no icon.
 
 ### I2 - The stock Lucide set, unmodified - P1 - render: no
 
-Gate: Are the most common Lucide glyphs used at default weight and size throughout? Zap, sparkles, rocket, shield, check-circle.
+Gate: Are the most common Lucide glyphs used at default weight and size throughout?
+Zap, sparkles, rocket, shield, check-circle.
 Why: they are the default icons of the default design.
 Instead: choose icons that name the specific thing, adjust the weight to match the type, or drop icons entirely.
 
@@ -184,9 +223,11 @@ Instead: choose icons that name the specific thing, adjust the weight to match t
 
 ### CP1 - Invented pseudo-technical labels - P0 - render: no
 
-Gate: Does the interface contain labels like Q-01, SECTION 01, Note 02.1, Route A, or Phase III where no such numbering exists in the product?
+Gate: Does the interface add decorative numbered labels or invented codes such as Q-01, SECTION 01, Note 02.1, Route A, or Phase III?
 Why: it performs technical seriousness the content has not earned.
-Instead: name the section. If numbering helps navigation on a reference page, use plain numbers that correspond to something real.
+Instead: name the section.
+Actual quantities, ordered steps and meaningful reference navigation are not decorative labels.
+Do not add numbering to a persuasion page for atmosphere.
 
 ### CP2 - Arrow glyphs stapled to link text - P1 - render: no
 
@@ -205,7 +246,8 @@ Instead: use a listed figure, source the new one and add it to `voice.md`, or re
 
 Gate: Do headings, button labels, empty states, or tooltips contain anything from the `copy-review` catalog?
 Why: interface copy is written last and reviewed least.
-Instead: run `copy-review` over the extracted strings.
+Instead: check the extracted strings against the project voice and the sibling `copy-review` catalog when available.
+Without that catalog, flag concrete filler, invented claims, long dash punctuation and generic promotional wording directly.
 
 ---
 
@@ -215,7 +257,8 @@ Instead: run `copy-review` over the extracted strings.
 
 Gate: Does the page use glossy 3D blobs, floating geometric shapes, or abstract render stock imagery?
 Why: it fills space without saying anything about the product.
-Instead: show the product, the people who use it, or the work it produces. If none of those can be shown, show nothing.
+Instead: show the product, the people who use it, or the work it produces.
+If none of those can be shown, show nothing.
 
 ---
 
@@ -224,9 +267,11 @@ Instead: show the product, the people who use it, or the work it produces. If no
 ### A1 - Failing contrast - P0 - render: yes
 
 Gate: Does any text, icon, or focus ring fail its contrast threshold against its computed background?
-Detect: compute against the rendered background, not the declared one. Overlays, gradients, and translucent panels change the actual value.
+Detect: compute against the rendered background, not the declared one.
+Overlays, gradients, and translucent panels change the actual value.
 Why: low-contrast grey on white is a house style in machine-made interfaces, and it is a genuine barrier.
-Instead: raise the foreground contrast until it passes. Do not solve it by making the text larger.
+Instead: raise the foreground contrast until it passes.
+Do not solve it by making the text larger.
 
 ### A2 - Border width shifting between states - P2 - render: no
 
@@ -238,22 +283,24 @@ Instead: hold the width constant and change the colour, or use an outline that d
 
 Gate: Does any button label, primary nav link, tab label, breadcrumb, or CTA wrap to two or more lines?
 Why: a wrapped control reads as broken, and it usually means the label is doing too much.
-Instead: shorten the label. If it cannot be shortened, widen the control.
+Instead: shorten the label.
+If it cannot be shortened, widen the control.
 
 ---
 
 ## X - Context fit
 
-These three are the captain's own rules.
-No published skill encodes them, and they catch what the catalogs above cannot.
+These gates check the relationship between the design, its subject and its task.
 
 ### X1 - Visual language not drawn from the client's world - P0 - render: yes
 
 Gate: Does the page's visual language come from generic software decoration rather than from the client's industry and the page's job?
-Requires: the "Visual language" section of `voice.md`. Without it, report this gate as skipped.
+Requires: the "Visual language" section of `voice.md`.
+Without it, report this gate as skipped and assess the supplied brief separately in the broader context review.
 Ask: what is the equivalent mark in this industry, and does the rest of the site already use it?
 Why: this is what separates a page made for this client from a page made for anyone.
-Instead: take the motif from the client's own material. Their forms, their instruments, their documents, their product, their trade.
+Instead: take the motif from the client's own material.
+Their forms, their instruments, their documents, their product, their trade.
 
 ### X2 - Layout does not match the page's job - P0 - render: no
 
@@ -262,6 +309,7 @@ Reference furniture: index rails, numbered clauses, sticky tables of contents, d
 Persuasion furniture: full-bleed heroes, staged reveals, testimonial blocks, closing CTAs.
 Why: an index rail kills a persuasion page, and a hero wastes a reference page.
 Instead: decide what the page is for, then pick the furniture that serves it.
+A useful comparison table can serve a buying decision; judge the function, not the component name alone.
 
 ### X3 - Every section reveals identically - P1 - render: yes
 

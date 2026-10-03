@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maintenance reference fixture</title>
+  <style>
+    :root { --ink: #171717; --paper: #faf9f5; --rule: #666; --focus: #004db3; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px; color: var(--ink); background: var(--paper); font: 1rem/1.6 system-ui, sans-serif; }
+    .layout { display: grid; grid-template-columns: 200px minmax(0, 65ch); gap: 48px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; letter-spacing: -.025em; }
+    h2 { font-size: 1.5rem; line-height: 1.25; margin-top: 40px; }
+    .meta { font-size: .875rem; }
+    a { color: inherit; text-underline-offset: .2em; }
+    nav a { display: block; padding-block: 10px; }
+    a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    table { border-collapse: collapse; inline-size: 100%; }
+    th, td { border-bottom: 1px solid var(--rule); text-align: left; padding: 12px 8px; }
+    @media (max-width: 680px) { body { padding: 16px; } .layout { display: block; } }
+  </style>
+</head>
+<body>
+  <header><p class="meta">Maintenance reference</p><h1>Inspect and clean the filter</h1></header>
+  <div class="layout">
+    <nav aria-label="On this page"><ol><li><a href="#prepare">Prepare</a></li><li><a href="#inspect">Inspect</a></li><li><a href="#clean">Clean</a></li></ol></nav>
+    <main>
+      <section id="prepare"><h2>Prepare</h2><p>Disconnect the unit from its power supply before opening the cover.</p></section>
+      <section id="inspect"><h2>Inspect</h2><table><caption>Inspection decisions</caption><thead><tr><th scope="col">Condition</th><th scope="col">Action</th></tr></thead><tbody><tr><td>Loose dust</td><td>Clean the filter</td></tr><tr><td>Torn mesh</td><td>Replace the filter</td></tr></tbody></table></section>
+      <section id="clean"><h2>Clean</h2><p>Use the cleaning method specified in the unit's manual.</p></section>
+    </main>
+  </div>
+</body>
+</html>
