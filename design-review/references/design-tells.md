@@ -315,4 +315,6 @@ A useful comparison table can serve a buying decision; judge the function, not t
 
 Gate: Does every section animate in with the same opacity 0 to 1 plus a small translateY?
 Why: an animation applied uniformly is decoration, not communication.
-Instead: each animation should perform its section's argument, and should differ from the one above it. A section with no argument to perform should not animate at all.
+Instead: each narrative animation performs its section's argument and differs from its neighbour.
+Compose a brand-derived signature with intentional still reading intervals around it.
+A persuasion page whose only motion is small reveals or control hovers needs a stronger motion direction; see [motion](motion.md).

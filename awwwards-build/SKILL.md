@@ -20,7 +20,8 @@ description: >
 Building a page that would stand next to recent Awwwards Sites of the Day, from a brief, without a second pass to find out what the page was meant to say.
 
 The studied winners have no shared section count, grid, or opening animation.
-What they share is that content, sequence, composition, and controls were decided together and each one answers to the subject.
+That is permission to invent a subject-specific entrance, not to omit motion direction.
+Content, sequence, composition, motion, and controls must be decided together and answer to the subject.
 This skill makes an agent take those decisions in order and leave evidence for each.
 
 ## This skill or design-review
@@ -73,6 +74,9 @@ Each stage has an output; the output is the evidence that the stage ran.
    For each fact or claim: its source, the asset that proves it, the visitor concern it answers, and where it leads.
    Mark missing proof as a dependency.
    Never fabricate a number, client, testimonial, certification, or capability to fill a layout.
+   When removing unverified visual material, replace its visual role with equally strong verified material or an original illustrative treatment: owned photography, a commissioned or generated illustration, a purposeful 3D scene, or substantial type-led art direction.
+   Record the replacement, its provenance, and what it can honestly demonstrate.
+   Removing unsupported proof does not authorize inventing proof or leaving the dominant composition empty.
 3. **Sequence.**
    Write each beat as visitor concern, answer, evidence, and the reason it follows the previous beat.
    Stop when the argument and the remaining concerns are answered, not at a target count.
@@ -80,12 +84,18 @@ Each stage has an output; the output is the evidence that the stage ran.
 4. **Section briefs.**
    Fill the section brief for every beat before choosing a pattern or a component.
    Choose patterns from `references/section-catalog.md` because the content calls for them, never to fill a page.
+   Plan one signature moment for the page and a motion level for every section using [motion direction](references/motion-direction.md).
+   Decide whether depth, material, camera travel, or a shader would strengthen the argument before defaulting to flat DOM composition.
 5. **Whole-page wireframe.**
    Draw the full page at desktop and narrow widths with real copy lengths and real image shapes, the hero together with its successor.
    Apply the composition rules in `references/section-catalog.md`.
-6. **Motion as states.**
-   For each interactive or transitional section, record entry, active, and exit states, the trigger, what stays readable, scroll ownership, reversal, the escape route, and the reduced-motion still.
-   Each motion performs that section's argument and differs from the one above it.
+6. **Motion direction and states.**
+   Read [motion direction](references/motion-direction.md), then the relevant implementation references in `design-review`.
+   For every section, record its motion level, entry, active, and exit states, trigger, timing or scroll interval, readable content, scroll ownership, reversal, escape route, and reduced-motion version.
+   Prototype the signature moment in motion, including its handoff, before building the remaining sections.
+   A persuasion page needs an expressive opening or first handoff, a later narrative transformation, and coherent control feedback.
+   One sustained signature scene can cover both narrative beats; tiny hovers and a progress hairline alone cannot.
+   Each narrative action performs the section's argument and differs from its neighbour; still sections provide deliberate reading intervals.
 7. **Components.**
    Build from brand evidence, a small visual grammar, an explicit state contract, and a motion contract, then apply the per-component rules.
    Method and rules: `references/component-rules.md`.
@@ -110,6 +120,7 @@ These override anything a reference site or design system does.
   Use the real names of things.
   The same goes for numbered navigation that only exists to look technical.
 - No AI-slop visual language: glowing nodes and connected dots, gradient blobs, floating glass, neon on dark, emoji as icons, rows of three equal icon-topped cards.
+  Use the stronger subject-derived alternatives in [motion direction](references/motion-direction.md#replace-the-banned-default-with-craft).
 - No universal fade-and-rise reveal.
   Each animation performs its own section's argument and differs from its neighbour.
 - Visual language comes from the client's world and the page's job.
@@ -125,7 +136,7 @@ The handoff, in this order:
 3. Chosen sequence with the reason for each transition, and one line on the rejected structure.
 4. Section briefs.
 5. Desktop and narrow wireframes, as annotated text diagrams or a rendered low-fidelity page.
-6. Motion state notes per interactive section.
+6. Signature storyboard and working prototype, motion levels and state notes for every section, 3D decision, performance budget, and fallback evidence.
 7. Component specification: one record per component, using the template in `references/acceptance.md`.
 8. The built page or the files changed.
 9. Acceptance report: every gate by ID with pass, fail, not applicable with a reason, or unchecked with a reason.

@@ -32,6 +32,8 @@ Run before visual refinement, again on the built page.
 | W11 | The least certain transition was not tested with its neighbouring sections | no |
 | W12 | A critical asset, factual claim, or primary navigation behaviour remains undefined | no |
 | W13 | Output attributes a recommendation to Awwwards or to a studio, or presents a starting value as a winner's requirement | no |
+| W14 | The page has no brand-derived signature storyboard, a section has no motion level, or the 3D/shader decision is missing | no |
+| W15 | Removing an unverified dominant visual leaves no equally strong, honestly sourced or original illustrative replacement | required |
 
 ## Section and composition gates
 
@@ -50,6 +52,13 @@ Run before visual refinement, again on the built page.
 | S11 | Two adjacent sections share the same reveal, or any section uses the universal fade-and-rise | required |
 | S12 | A section carries a numbered or pseudo-technical label, or reference furniture sits on a persuasion page | required |
 | S13 | The visual language comes from a generic kit (glowing nodes, connected dots, gradient blobs, floating glass, neon on dark, emoji icons) instead of the client's world | required |
+| S14 | A persuasion page has no expressive opening or first handoff, no later narrative transformation, or only hovers, a progress line and minor reveals; the planned signature does not command its intended composition | required |
+| S15 | A signature scene breaks on reverse, fast scroll, direct entry, resize, interruption or route return; reduced motion merely hides it or leaves empty pin distance | required |
+| S16 | Motion has no measured frame and asset budget, rendering continues unnecessarily offscreen, or failed media/WebGL leaves content inaccessible | required |
+
+For `W14`, operational and reference pages can use a compact branded state transition or a distinctive still composition when movement would obstruct the task.
+For `S14`, record explicit static briefs and reduced-motion versions as exceptions, not as failures.
+These gates require ambitious composition and authored behavior, not a mandatory library or arbitrary 3D object.
 
 ## Component gates
 

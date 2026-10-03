@@ -90,7 +90,8 @@ For each image slot, decide subject, role, ratio, focal point, crop, text-safe r
 Inspect desktop and mobile crops independently.
 Use responsive sources, explicit dimensions or aspect ratio, and appropriate compression.
 Do not lazy-load the probable LCP hero image; defer lower-priority media.
-Use video only when movement reveals something a still cannot, with a poster that works before playback and if autoplay fails.
+Use video to express actual movement, scale, material or atmosphere from the subject, with a composed poster that works before playback and if autoplay fails.
+If unverified imagery is removed, replace its visual role with equally strong owned imagery, original 3D, illustration or type-led art direction; see [the build playbook](build-playbook.md).
 Keep decorative media out of the accessibility tree and write useful alt text for informative imagery.
 
 Inspect logos at their actual displayed size, including any descriptor below the main mark.

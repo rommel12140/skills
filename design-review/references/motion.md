@@ -2,7 +2,47 @@
 
 Excellent motion clarifies a change, expresses the subject or carries the reader between related ideas.
 It has a designed beginning, middle, interruption and end.
-Smoothness alone does not make a useful animation, and a moving page is not necessarily a better page.
+Craft includes expressive scale, material and continuity as well as useful state feedback.
+Design motion with the composition, then prove the same idea in its static alternative.
+
+## Signature and motion coverage
+
+Every page plans one signature moment derived from the brand's real object, process, material or typography.
+It should command its intended composition and connect at least two meaningful states, not merely decorate a corner.
+Name the source, reader benefit, dominant visual, entry, transformation, resolution, handoff, timing, implementation owner and alternate versions.
+Evaluate a 3D or shader approach explicitly when material, depth or spatial continuity could strengthen the idea.
+Prototype that decision early; do not default to a flat layout because a static wireframe was easier to draw.
+
+Assign every section a level: **still**, **responsive**, **narrative**, or **signature**.
+Still sections support reading and comparison; responsive motion confirms input; narrative motion carries an idea; the signature is the page's central expression.
+A persuasion page's normal-motion version requires an expressive opening or first handoff, a later narrative transformation, coherent control feedback, and one of those beats developed into the signature.
+One continuous scene can cover the two narrative beats if the later state advances the argument.
+A progress hairline, tiny hover offsets and a minor image reveal alone fail this bar.
+Do not turn this into identical motion density or a repeated effect across every section.
+
+For operational or reference pages, the signature may be a compact branded state transition or a distinctive still composition that supports the task.
+Explicit static briefs, accepted protected behavior and reduced-motion preferences take precedence.
+Stillness is an authored choice in those contexts, not the default answer to an ambitious persuasion brief.
+
+Implementation: [GSAP, Lenis, type, cursors and transitions](motion-recipes.md), [Three.js, R3F, shaders and budgets](webgl.md).
+Evidence: [dated winner and studio research](motion-research.md).
+
+## Stronger alternatives to the banned defaults
+
+| Do not use | Develop instead |
+| --- | --- |
+| Glowing networks, halos and pulsing dots | A subject-specific assembly or real process whose parts transform with the explanation |
+| Equal icon-topped feature triplets | A dominant demonstration, asymmetric evidence field or useful aligned comparison |
+| Universal fade-up | Distinct crop, mask, camera, material and type transformations matched to each section's argument |
+| Generic gradient mesh blobs | Directional light, constrained color interpolation and fine grain attached to an actual material or brand field |
+| Floating glass and neon-on-dark atmosphere | Designed lighting and texture from the actual product, place, paper, metal, fabric or pigment |
+| Invented technical codes and numbered decoration | Real names, meaningful captions, verified dimensions and typographic hierarchy |
+| Emoji iconography | Existing marks, tailored silhouettes, commissioned pictograms or precise text |
+| Reference rails on persuasion pages | Continuity between image, object and next section, with visible actions in the reading flow |
+
+The bans stay in force even when an award winner uses the effect.
+Removing a weak effect or unverified image requires a replacement that carries its visual role at equal strength.
+Use owned photography, original 3D, generated illustration or composed kinetic type honestly; an illustration is never evidence of a real client, result or product capability.
 
 ## Specify the behavior before the library
 
@@ -20,7 +60,8 @@ For every significant motion, record:
 | Fallback | Reduced motion, touch, unsupported features, slow asset and failed asset |
 | Cost | Main-thread, paint, GPU, transfer and cleanup requirements |
 
-If the purpose is only to make the page feel modern, remove the motion and improve composition first.
+If the purpose is only to make the page feel modern, redesign it around a concrete object, material, relationship or phrase from the subject.
+Keep the page's motion coverage intact while replacing the weak idea.
 Use one coherent motion character, such as precise and responsive or measured and continuous.
 Vary the action performed by adjacent narrative sections without assigning every component a different easing curve.
 Repeated buttons and accordions should behave consistently.
@@ -102,8 +143,10 @@ If a smooth-scroll library is used, verify anchors, focus scrolling, nested scro
 | Display a changed state | Update the affected row or control locally | Keep unrelated data stationary |
 
 Do not replace the banned universal fade-up with a different universal effect.
-Do not add decorative cursor trails, magnetic targets, glowing nodes or arbitrary 3D just to increase activity.
-Useful movement can be small; an inactive section can be entirely still.
+Give cursor and hover behavior character through a meaningful tool or material response, while leaving hit areas stable.
+For example, a photographic contact sheet can expose a crop through a bounded inspection lens, and a book cover can flex on its own surface without moving its link target.
+Use [the hover recipe](motion-recipes.md#hover-and-cursor-character) and test keyboard and touch equivalents.
+Use still reading intervals around the signature, with a composed handoff into and out of them.
 
 ## Controls and route transitions
 
@@ -128,6 +171,7 @@ Use `will-change` sparingly and remove unnecessary promoted layers.
 Pause off-screen and background-tab animation; disconnect observers, timelines and listeners on teardown.
 
 For WebGL or canvas, cap rendering resolution when necessary, optimize textures and geometry, defer noncritical assets and provide a useful static fallback.
+Follow [WebGL craft](webgl.md) for scene selection, shader recipes, resource cleanup and explicit starting budgets.
 Keep navigation and reading content in semantic HTML.
 A GPU effect that runs well on the development machine is not proof of mobile smoothness.
 
@@ -158,6 +202,9 @@ See [Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-h
 
 ## Motion acceptance
 
+The page has a visible brand-derived signature and an explicit level for every section.
+The normal-motion persuasion page meets the opening, later-transformation and control-feedback minimum.
+Removed visual material has an equally strong honest replacement.
 The section's argument remains clear without its effect.
 The moving version adds a specific relationship, emphasis or piece of information.
 The sequence works forward, backward, on repeat and when interrupted.

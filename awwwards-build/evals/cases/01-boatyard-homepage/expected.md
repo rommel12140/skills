@@ -15,8 +15,9 @@ A full one-pass build from a brief that tempts habit ("add the usual sections", 
 - Tie at least one composition to a physical fact of the material, for example the lines plans as a stable drawing beside a changing photograph, or the hull-turning video as the scale or process evidence.
 - Put the yard visit invitation after the material that makes a visit worth taking, with the practical details needed to act.
 - Draw desktop and narrow wireframes with real labels and real image shapes, including the hero and its successor together.
-- Give motion state notes (entry, active, exit, trigger, what stays readable, reduced-motion still) for each interactive or transitional section, each different from its neighbour.
-- Treat 3D as a question the evidence must answer: use it only where it shows something the photographs and drawings cannot, or state why it is not used.
+- Give motion levels and state notes for every section, with a brand-derived signature, an expressive opening/handoff and a later narrative transformation.
+- Treat 3D as a positive option to prototype where hull geometry, material or scale serves the argument; if photography, film or type serves it better, compose an equally strong motion direction and state the reason.
+- Preserve readable content, native controls and an authored reduced-motion version.
 - Report every render-required gate as unchecked, with the reason "no browser".
 
 ## Must not

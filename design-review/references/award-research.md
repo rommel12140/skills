@@ -3,6 +3,7 @@
 Research checked on 2026-10-03.
 Public award examples below are research sources, not private client history or templates to copy.
 Award status, live sites and judging documents can change; recheck the primary source when a current claim matters.
+For the motion-focused follow-up, see [live scene observations and studio implementation accounts](motion-research.md).
 
 ## Published criteria
 
@@ -120,7 +121,8 @@ See [typography](typography.md).
 **What makes the animation exceptional?**
 Movement that carries a relationship or idea, has well-composed intermediate frames, responds to the user's pace and remains coherent when reversed or interrupted.
 Static and reduced-motion versions stay useful, and the implementation meets an actual performance budget.
-More effects, slower easing or mandatory scroll theater do not establish quality.
+Develop an expressive opening and a later transformation around one memorable subject-derived signature, with deliberate reading intervals and direct navigation.
+Evaluate a spatial or shader treatment when it makes the subject tangible, then measure and optimize the chosen idea.
 See [motion](motion.md).
 
 These are design inferences from the evidence and the task's constraints, not a claim of a universal winning formula.
