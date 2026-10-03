@@ -1,45 +1,55 @@
-# Evals
+# Design-review evals
 
-Three cases.
-Each holds an input and the findings a correct pass must produce.
+These cases test building decisions, scoped refinement and evidence-based review.
+All scenarios and fixtures are synthetic and self-contained.
+They generalize recurring failure patterns without reproducing private projects or conversations.
 
-These exist to answer one question: did editing the skill make it better or quietly worse.
-
-| Case | Input | What it measures |
-| :--- | :--- | :--- |
-| `01-generic-saas-hero` | A page carrying planted tells | Recall. Every planted ID must be found. |
-| `02-editorial-reference-page` | A page built under this catalog | False positives. Nothing above P2 may be reported. |
-| `03-webflow-export` | A real Webflow export | That the Webflow fix column is usable, not theoretical. |
-
-Cases 02 and 03 matter more than case 01.
-
-Any anti-slop catalog can find slop.
-The failure mode that makes a reviewer stop trusting a tool is the false positive, and case 02 is the guard against it.
-The measured false-positive rate on the published writing catalogs sits around 4%, so this is not hypothetical.
-
-## Running a case
-
-There is no test runner.
-A run is an agent pass over the input in audit mode, with the output compared to `expected-findings.md`.
-
-A runner before we know the skills are useful would be machinery ahead of need.
-If the eval set grows past a handful of cases, revisit that.
-
-## Grading
-
-| Result | Meaning |
+| Case | Main check |
 | :--- | :--- |
-| Pass | Every expected ID found, no unexpected finding above P2 |
-| Recall miss | An expected ID was not found |
-| False positive | A finding above P2 that the case does not expect |
-| Wrong fix | The ID was found but the fix named the wrong stack |
+| [Generic source-only page](cases/01-generic-saas-hero/input.md) | Find planted source tells without inventing a rendered pass |
+| [Editorial reference page](cases/02-editorial-reference-page/input.md) | Respect page purpose and accepted typography; avoid false positives |
+| [Webflow template adaptation](cases/03-webflow-template/input.md) | Preserve composition, assets and interactions; give native-stack fixes |
+| [Accepted card refinement](cases/04-protected-refinement/input.md) | Improve hierarchy without adding strips or replacing approved decisions |
+| [Report surface and buttons](cases/05-report-surface/input.md) | Improve reading structure while keeping controls recognizable |
+| [Reference motion](cases/06-motion-sequence/input.md) | Observe mechanism, context, interruptions and repeated behavior |
+| [First load and mobile](cases/07-font-and-mobile/input.md) | Check cold fonts, true viewport and image visibility |
+| [Loading and recovery](cases/08-loading-states/input.md) | Match content geometry and distinguish missing data from loading |
+| [A complete new build](cases/09-subject-led-build/input.md) | Produce a subject-specific page through internal revision |
+| [Context fit](cases/10-context-fit/input.md) | Reject an industry motif that obstructs the actual task |
+| [Quiet sign-in](cases/11-task-focused-login/input.md) | Compose the requested task without unnecessary product promotion |
+| [Award and type claims](cases/12-evidence-and-typography/input.md) | Separate official criteria, measured evidence and recommendations |
 
-A recall miss and a false positive are not equally bad.
-A false positive costs the reviewer's trust, and trust does not come back.
+## Run a case
 
-## Case 02 note
+Give an agent the skill and one case's `input.md`, plus the referenced fixture when present.
+Do not give it `expected-findings.md` until grading.
+Use the mode requested by the input and the tools actually available.
+For a building task, judge the resulting implementation and preview, not an unexecuted plan.
+A fresh authorized worker is useful for a behavioral evaluation; never delegate when the task prohibits it.
 
-The input for case 02 is the anti-slop research brief built on 3 August 2026.
-It was designed under this catalog, so it doubles as a live check on both the catalog and the page.
-If the catalog flags it above P2, either the catalog is wrong or the page is.
-Both answers are worth having, so record which one it was.
+The Markdown scenarios supply explicit hypothetical observations where a real browser fixture is unnecessary.
+An agent may reason from those observations but must not claim it personally captured or tested them.
+For HTML fixtures, run through an authorized local preview and inspect the browser when evaluating rendered gates.
+When no browser is supplied, grade source analysis and evidence honesty only.
+Do not make a rendered-quality claim from the expected answer.
+
+Compare the result with the case's `expected-findings.md`.
+Record the skill revision, model when known, tools, mode, findings, unacceptable outcomes and any untested requirement.
+A static editorial walkthrough can check coverage and contradictions; label it as such rather than as an independent agent run.
+
+## Grade the decision, not a phrase
+
+| Outcome | Meaning |
+| :--- | :--- |
+| Pass | Required decisions and findings are present, with no prohibited result |
+| Recall miss | A specified defect is ignored |
+| False positive | An accepted or task-appropriate choice is treated as a defect without evidence |
+| Scope failure | The agent changes protected work or implements an audit-only request |
+| Evidence failure | It claims a visual, interaction, source or performance check it did not perform |
+| Incomplete build | It stops at a plan or polished hero while requested content or states remain unfinished |
+| Wrong correction | It identifies a problem but prescribes an unsuitable stack, task or behavior |
+
+Use catalog IDs where they fit and descriptive craft findings for other defects.
+Equivalent concrete fixes can pass; the eval does not require matching wording or one visual style.
+Severity can differ with demonstrated impact, but unsupported certainty and preservation violations fail regardless of severity.
+Do not turn the case results into a synthetic design score.

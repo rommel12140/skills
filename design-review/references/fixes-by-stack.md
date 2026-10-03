@@ -2,6 +2,9 @@
 
 Keyed to the IDs in `design-tells.md`.
 Report only the column matching the stack in use.
+Preserve documented accepted choices and correct the actual defect; do not apply a replacement mechanically.
+For a stack not listed, translate the same design correction into its native component system.
+Check the installed version and existing token setup before editing; Tailwind projects may use CSS theme variables or a configuration file.
 
 Webflow fixes are Designer operations and class changes, not CSS to paste.
 Pasting CSS into a Webflow embed defeats the class system and is not a fix.
@@ -11,14 +14,16 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 ## T1 - Default display face
 
 - **HTML/CSS**: replace the `@font-face` or font link, then set the display face on a `--font-display` token and the body face on `--font-body`.
-- **React/Tailwind**: change `fontFamily.display` and `fontFamily.sans` in the theme, not per-component classes. Remove any `font-[Inter]` arbitrary values.
-- **Webflow**: upload the display face under Site settings, Fonts. Set it on the `h1` through `h6` tag selectors so it inherits, rather than on individual elements.
+- **React/Tailwind**: change `fontFamily.display` and `fontFamily.sans` in the theme, not per-component classes.
+  Remove any `font-[Inter]` arbitrary values.
+- **Webflow**: upload the display face under Site settings, Fonts.
+  Set it on the `h1` through `h6` tag selectors so it inherits, rather than on individual elements.
 
 ## T2 - One face at every size
 
-- **HTML/CSS**: introduce a second token and apply it to headings only.
-- **React/Tailwind**: add `font-display` to the heading components; leave body on the default sans.
-- **Webflow**: set the display face on the heading tag selectors, body face on the Body (All Pages) selector.
+- **HTML/CSS**: define display/body role tokens and tune their scale, weight, width and spacing; add a second family when it supplies needed contrast.
+- **React/Tailwind**: define explicit display/body roles in the theme and heading components; verify role contrast before adding another font.
+- **Webflow**: define heading and Body (All Pages) type roles using the chosen family or pairing; verify inherited styles at every breakpoint.
 
 ## T3 - Italic display type
 
@@ -30,21 +35,26 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 
 ## C1 - Purple-to-blue gradient
 
-- **HTML/CSS**: replace the `linear-gradient` with a flat token colour. If a gradient stays, take both stops from the brand palette.
-- **React/Tailwind**: remove `bg-gradient-to-*` with `from-purple-*`/`to-blue-*`. Use a single `bg-[--color-surface]` token.
+- **HTML/CSS**: replace the `linear-gradient` with a flat token colour.
+  If a gradient stays, take both stops from the brand palette.
+- **React/Tailwind**: remove `bg-gradient-to-*` with `from-purple-*`/`to-blue-*`.
+  Use a single `bg-[--color-surface]` token.
 - **Webflow**: open the background gradient editor and either delete the gradient or set both stops to swatches from the project's global palette.
 
 ## C2 - Untouched library palette
 
 - **HTML/CSS**: define the palette in `:root` custom properties and point the component CSS at them.
-- **React/Tailwind**: override the theme colours in the Tailwind config or the DaisyUI theme block. Do not restyle components individually.
+- **React/Tailwind**: override the theme colours in the Tailwind config or the DaisyUI theme block.
+  Do not restyle components individually.
 - **Webflow**: create global swatches, then reassign every element that currently uses a default colour.
 
 ## C3 - Gradient-mesh blobs and neon-on-dark
 
-- **HTML/CSS**: delete the decorative layers. If the background must carry something, use a flat surface token.
+- **HTML/CSS**: delete the decorative layers.
+  If the background must carry something, use a flat surface token.
 - **React/Tailwind**: remove the absolutely positioned blurred divs and the `blur-3xl` utilities.
-- **Webflow**: delete the decorative div blocks from the hero. They are usually absolutely positioned children with a large blur filter.
+- **Webflow**: delete the decorative div blocks from the hero.
+  They are usually absolutely positioned children with a large blur filter.
 
 ## C4 - Colour outside the tokens
 
@@ -56,20 +66,23 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 
 ## L1 - Centred hero
 
-- **HTML/CSS**: change the hero container from a centred column to a grid. Put the headline in the first span and the supporting text in a narrower second span.
+- **HTML/CSS**: change the hero container from a centred column to a grid.
+  Put the headline in the first span and the supporting text in a narrower second span.
 - **React/Tailwind**: replace `text-center items-center mx-auto` on the hero with a `grid` and explicit spans.
 - **Webflow**: change the hero wrapper's layout from flex-centre to grid, then place the heading and supporting text in different columns.
 
 ## L2 - Three equal-width icon-topped cards
 
-- **HTML/CSS**: replace the three-column grid with an ordered list using hanging numerals, or with unequal spans.
+- **HTML/CSS**: replace the three-column grid with a list led by meaningful headings, an annotated proof image, or unequal spans.
 - **React/Tailwind**: replace `grid-cols-3` with an asymmetric span layout, drop the icon chip, and lead each item with its claim.
-- **Webflow**: unlink the third card from its symbol or component instance, then re-lay the section on the 12-column grid with unequal spans.
+- **Webflow**: recompose the parent grid and item spans using shared classes or component properties; keep component reuse where it remains useful and remove ornamental icons.
 
 ## L3 - Default page shape
 
-- **HTML/CSS**: reorder the sections so each one earns the next. This is an editing decision, not a CSS one.
-- **React/Tailwind**: same. Reorder the section components in the page file.
+- **HTML/CSS**: reorder the sections so each one earns the next.
+  This is an editing decision, not a CSS one.
+- **React/Tailwind**: same.
+  Reorder the section components in the page file.
 - **Webflow**: reorder the sections in the Navigator panel.
 
 ## L4 - Hero content below the fold at 1280x800
@@ -100,9 +113,23 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 
 ## K4 - Colour-accent border cards
 
-- **HTML/CSS**: remove `border-left`, distinguish by surface colour or spacing. If the colour carries status, add a text label.
+- **HTML/CSS**: remove `border-left`, distinguish by surface colour or spacing.
+  If the colour carries status, add a text label.
 - **React/Tailwind**: drop `border-l-4 border-primary`, use a distinct surface token and a status label.
 - **Webflow**: remove the left border on the card class and add a status text element.
+
+
+## K5 - Actions lose their button affordance
+
+- **HTML/CSS**: use semantic buttons for actions and the existing button classes; tune padding and min-height while preserving visible shape and focus.
+- **React/Tailwind**: fix the shared Button variants and their states instead of adding a one-off link-like action; keep the label and hit area stable while busy.
+- **Webflow**: apply the established button class and state styling; use correct action semantics for custom controls and test keyboard behavior in the published preview.
+
+## K6 - Content loading has no matching structure
+
+- **HTML/CSS**: retain the content container and replace its loading contents with geometry matching the final structure; use one status, set/clear busy state and render failure/retry separately.
+- **React/Tailwind**: build skeletons from the same layout primitives as loaded content, keep stable keys and dimensions, and model loading/empty/error/partial states distinctly.
+- **Webflow**: style loading, empty and error containers through the shared classes; where custom data loading needs script, preserve the native layout and update only the relevant region and status.
 
 ---
 
@@ -120,7 +147,8 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 
 ## M3 - Glowing nodes and connected dots
 
-- **HTML/CSS**: delete the decoration. If a system needs showing, draw the actual system.
+- **HTML/CSS**: delete the decoration.
+  If a system needs showing, draw the actual system.
 - **React/Tailwind**: remove the SVG or canvas decoration component.
 - **Webflow**: delete the decorative embed or Lottie element.
 
@@ -135,30 +163,36 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 ## I2 - Stock Lucide set
 
 - **HTML/CSS**: choose icons that name the specific thing, and match their stroke weight to the type.
-- **React/Tailwind**: same. Set a consistent `strokeWidth` rather than accepting the default.
-- **Webflow**: replace the icon assets. Check the stroke weight reads at the size used.
+- **React/Tailwind**: same.
+  Set a consistent `strokeWidth` rather than accepting the default.
+- **Webflow**: replace the icon assets.
+  Check the stroke weight reads at the size used.
 
 ---
 
 ## CP1 - Invented pseudo-technical labels
 
 - **HTML/CSS**: replace with a real section name, or delete the label.
-- **React/Tailwind**: same. These usually live in a section header component.
+- **React/Tailwind**: same.
+  These usually live in a section header component.
 - **Webflow**: edit the eyebrow text element, or delete it.
 
 ## CP2 - Arrow glyphs on links
 
-- **HTML/CSS**: remove the trailing character. If direction matters, use an icon that moves on hover.
+- **HTML/CSS**: remove the trailing character.
+  If direction matters, use an icon that moves on hover.
 - **React/Tailwind**: remove the arrow from the link component's children.
 - **Webflow**: delete the arrow text or icon inside the link block.
 
 ## CP3 - Unlisted quantitative claim
 
-- Stack-independent. Use a figure from `voice.md`, source the new one and add it there, or remove the claim.
+- Stack-independent.
+  Use a figure from `voice.md`, source the new one and add it there, or remove the claim.
 
 ## CP4 - Copy tells in interface strings
 
-- Stack-independent. Extract the strings and run `copy-review` over them.
+- Stack-independent.
+  Extract the strings and use the project voice and `copy-review` when available; otherwise identify concrete filler, unsupported claims and banned phrasing directly.
 
 ---
 
@@ -172,19 +206,23 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 
 ## A1 - Failing contrast
 
-- **HTML/CSS**: raise the foreground colour until it passes against the computed background. Do not solve it by increasing font size.
+- **HTML/CSS**: raise the foreground colour until it passes against the computed background.
+  Do not solve it by increasing font size.
 - **React/Tailwind**: replace `text-muted-foreground` or `text-gray-400` on small text with a token that passes.
-- **Webflow**: change the text colour swatch. If the text sits over an image, add a solid scrim rather than lowering the image opacity.
+- **Webflow**: change the text colour swatch.
+  If the text sits over an image, add a solid scrim rather than lowering the image opacity.
 
 ## A2 - Border width shifting between states
 
 - **HTML/CSS**: hold `border-width` constant across states and change colour instead.
-- **React/Tailwind**: avoid `focus:border-2`. Use `focus:ring-2` with `ring-offset`, which does not affect layout.
+- **React/Tailwind**: avoid `focus:border-2`.
+  Use `focus:ring-2` with `ring-offset`, which does not affect layout.
 - **Webflow**: set the same border width on default, hover, focus, and error states.
 
 ## A3 - Wrapping control labels
 
-- **HTML/CSS**: shorten the label. If it cannot be shortened, widen the control or reduce its horizontal padding.
+- **HTML/CSS**: shorten the label.
+  If it cannot be shortened, widen the control or reduce its horizontal padding.
 - **React/Tailwind**: same, and add `whitespace-nowrap` only after the label is genuinely short enough to fit.
 - **Webflow**: shorten the button text, or widen the button and check every breakpoint.
 
@@ -198,12 +236,14 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 
 ## X2 - Layout does not match the page's job
 
-- Stack-independent. Decide what the page is for, then remove the furniture that belongs to the other kind of page.
+- Stack-independent.
+  Decide what the page is for, then remove the furniture that belongs to the other kind of page.
 - Reference furniture on a persuasion page: remove the index rail, the clause numbering, and the sticky contents.
 - Persuasion furniture on a reference page: remove the full-bleed hero, the staged reveals, and the closing CTA.
 
 ## X3 - Every section reveals identically
 
-- **HTML/CSS**: remove the shared reveal class. Keep motion only where it performs the section's argument.
+- **HTML/CSS**: remove the shared reveal class.
+  Keep motion only where it performs the section's argument.
 - **React/Tailwind**: remove the shared animation wrapper applied at the section level.
 - **Webflow**: remove the page-level scroll interaction applied to every section, and rebuild motion only where it earns its place.
