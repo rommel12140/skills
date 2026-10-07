@@ -16,6 +16,8 @@ Designs, builds, refines and audits websites and interfaces against an Awwwards 
 Its catalog of AI-generated design tells remains the floor, with a build playbook, primary-source award research, craft references, worked examples and regression evals above it.
 Motion references cover GSAP, Lenis, kinetic type, page transitions, Three.js, React Three Fiber and shaders, with starter patterns and performance and accessibility budgets.
 Persuasion pages require a brand-derived signature, an expressive opening or handoff and a later narrative transformation, while operational pages preserve task-focused behavior.
+Performance, fit at every width and after a resize, the phone as its own composition, colour from the site's own family and loaders drawn from its mark are gates, each paired with the fix that held on a shipped page.
+Every refinement ships with before and after measurements and a running preview beside the current site.
 Refinement preserves accepted work, while reviews return concrete findings and stack-appropriate fixes.
 Rendered checks use `chrome-devtools-axi` when available; source-only work leaves visual and motion judgments explicitly unchecked.
 The skill also applies relevant checks to static artifacts, and never promises an award or reports a synthetic quality score.

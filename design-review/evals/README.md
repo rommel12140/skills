@@ -21,8 +21,12 @@ They generalize recurring failure patterns without reproducing private projects 
 | [Flat persuasion](cases/13-flat-persuasion/input.md) | Fail token motion despite clean semantics and no banned decoration |
 | [Ambitious accessible motion](cases/14-ambitious-accessible/input.md) | Preserve substantial 3D and type with authored alternate versions and supplied performance evidence |
 | [Visual replacement](cases/15-visual-replacement/input.md) | Replace unverified dominant imagery with equally strong honest art direction |
+| [Idle draws and a throttled phone](cases/16-idle-draws-and-throttled-phone/input.md) | Treat idle rendering and per-frame effects as P0 design defects with measured acceptance |
+| [Resize overflow and fragments](cases/17-resize-overflow-and-fragments/input.md) | Fit after a resize, no partial words in a stack, and the phone as its own composition |
+| [Flat palette and stock loader](cases/18-flat-palette-and-stock-loader/input.md) | Colour from the site's own family and a loader drawn from its mark |
 
 The subject-led build case also requires the new motion minimum.
+Cases 16 to 18 cover the performance, fit, phone, colour and loader gates added to the skill on 8 October 2026; they were written as editorial regression checks and have not been run by an independent agent.
 See [motion revision validation](motion-validation.md) for executed checks and untested scope.
 
 ## Run a case
