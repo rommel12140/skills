@@ -66,6 +66,8 @@ A useful direction specifies:
 
 Reject a direction whose description consists only of style adjectives.
 It should predict actual choices and exclusions.
+Make that direction inspectable in the representative slice: name the intended impression, show the actual palette swatches with section roles, set a real heading and paragraph in the intended type, and demonstrate the imagery or material treatment.
+Use these together to judge the impression; a list of adjectives, font names and hex values alone is not visual evidence.
 If changing the business name leaves the page equally plausible for any company, revisit the concept or proof.
 
 ## Compose the argument
@@ -84,6 +86,11 @@ For each section, write its job, evidence, dominant element, intended density an
 Vary visual rhythm through content and proportion: large image, compact comparison, detailed proof, quiet action.
 Do not force every section into a card grid, alternating split layout or full-screen scene.
 Use whitespace to group and pace actual content, not to conceal its absence.
+
+For a product walkthrough, keep a whole-screen view available to establish context, then pair it with a readable detail when the whole screen makes important content too small.
+A detail supplements the whole screen; it does not replace it with an unexplained crop.
+Sequence the screens in the product's real task order, name what changes at each step, and make steps directly selectable with visible keyboard and touch controls.
+Keep the same semantic order and useful selected state when camera travel or scroll enhancement is unavailable.
 
 ## Prove the system in a browser
 

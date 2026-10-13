@@ -50,6 +50,7 @@ Read it in Refine or Audit when judging or changing animation or transitions.
 Use [motion recipes](references/motion-recipes.md) for GSAP, Lenis, kinetic type, hover and route implementation, and [WebGL craft](references/webgl.md) for Three.js, React Three Fiber, shaders and rendering budgets.
 Read [motion research](references/motion-research.md) when choosing a mechanism from award winners or explaining its provenance.
 For Refine, load the relevant craft reference and the preservation rules in the playbook.
+For connected section choreography or product walkthroughs, also read the playbook's [whole-page composition](references/build-playbook.md#compose-the-argument) and motion's [section relationships](references/motion.md#give-sections-different-jobs).
 For Audit, read [the quality review](references/quality-review.md) and the catalog, then load the craft reference for each weak area.
 Read [award research](references/award-research.md) when selecting a direction or explaining the bar.
 Use [worked examples](references/worked-examples.md) to distinguish a substantive correction from a cosmetic one.

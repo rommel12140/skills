@@ -148,6 +148,13 @@ For example, a photographic contact sheet can expose a crop through a bounded in
 Use [the hover recipe](motion-recipes.md#hover-and-cursor-character) and test keyboard and touch equivalents.
 Use still reading intervals around the signature, with a composed handoff into and out of them.
 
+Compose the relationships between distinct sections as deliberately as each section's own reveal.
+For each boundary, name what carries through (an object, image, type alignment, material or spatial anchor), what changes to advance the argument, and how the outgoing layer resolves as the next becomes readable.
+Keep adjacent composition and motion specific to their content while reusing the site's identity, coordinated easing and spatial logic.
+Trace the foreground, background and persistent elements through intermediate frames so complementary animations do not compete for attention or obscure context.
+Review the opening, middle and ending together: each should have its own character and belong to the same authored journey.
+Do not pursue cohesion by flattening section grounds, removing expressive transformations or substituting one reveal everywhere.
+
 ## Controls and route transitions
 
 Use one owner for each animated property.
@@ -155,6 +162,11 @@ Cancel or reverse the current transition on a new input rather than piling up ti
 Test first hover, second hover, focus, activation, pointer leaving midway and rapid open/close.
 A button's label, accessible name, hit area and focus target must survive the visual effect.
 No hover effect should be the sole clue that a control exists.
+
+When a stage supports both direct step selection and scroll-driven progress, give explicit input precedence over passive scroll updates.
+Record the handback rule: when scrolling may resume control, how it reconciles the selected step and current progress, and what happens on reverse travel or resize.
+An unchanged scroll callback must not immediately undo a click or keyboard selection.
+Cancel superseded transitions and test rapid selection, selection mid-scroll, reverse scroll and the handback without a snap or focus loss.
 
 For route transitions, preserve the relationship between the selected item and the incoming content where useful.
 Update the URL, document title, focus and scroll restoration correctly.

@@ -59,12 +59,15 @@ When an external limitation prevents a check, mark it unchecked and describe the
 - Real content replaces draft material; numbers and claims have sources.
 - Template adaptation retains the authorized structure, density and interaction behavior.
 - A previous rejected variation has not survived in an untested route, breakpoint or state.
+- When changing shared CSS, tokens or components, identify sibling routes that consume them and compare their affected states with the accepted baseline; a clean capture of the edited route alone cannot prove a local change.
 
 ### Pixels and composition
 
 - Inspect 1280x800 first, then wider desktop and a true 390x844 mobile viewport, with a 320 CSS px stress check and relevant intermediate widths.
 - Confirm `innerWidth` and viewport metadata instead of assuming a resized desktop window is a phone.
 - Check hero context and primary action, each section, footer, navigation, modal/sheet and embedded preview.
+- Review the opening, middle and ending as a connected composition, then inspect their handoffs in motion. Preserve distinct section layouts and grounds while checking recurring identity, spatial continuity, layer order and readable pacing.
+- For a walkthrough, verify whole-screen context and readable detail together, real task order, and directly selectable steps; a tiny whole-screen thumbnail alone does not make the product inspectable.
 - Inspect image-heading alignment, column boundaries, consistent control baselines and optical gaps.
 - Check actual image crops, sharpness and color relationships at display size.
 - Check long headings, unusual names, multiline descriptions and realistic CMS content.
@@ -84,6 +87,8 @@ When an external limitation prevents a check, mark it unchecked and describe the
 - Confirm touch users do not need hover and ordinary scrolling is not trapped.
 - Verify focus appears immediately, moves appropriately, returns from modal surfaces and remains visible.
 - Confirm a failed asset or route cannot leave a covering layer or hidden content indefinitely.
+- Walk every section through the closing action with reduced motion and with WebGL unavailable or running through software rendering when those conditions can be tested. Check later decorative scenes as well as the hero; retain authored static composition, readable content and working controls, and mark unavailable profiles unchecked.
+- Test browser Back/Forward restoration, including a persisted `pageshow` return where supported: reconcile current route, scroll, selection and overlay state without replaying a blocking entrance or registering duplicate listeners.
 
 ### Data and recovery
 
@@ -93,6 +98,7 @@ When an external limitation prevents a check, mark it unchecked and describe the
 - Buttons remain visibly actionable, with consistent dimensions in busy states.
 - No missing data is converted into a fabricated zero, success or decorative statistic.
 - Forms have labels, meaningful validation and a correct success result.
+- Resolve competing asynchronous requests out of order, including an older failure after a newer success. Only the current request or navigation may update visible status, focus or overlays; abort or ignore obsolete results.
 
 ### Accessibility and delivery
 
