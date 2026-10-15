@@ -25,10 +25,12 @@ They generalize recurring failure patterns without reproducing private projects 
 | [Resize overflow and fragments](cases/17-resize-overflow-and-fragments/input.md) | Fit after a resize, no partial words in a stack, and the phone as its own composition |
 | [Flat palette and stock loader](cases/18-flat-palette-and-stock-loader/input.md) | Colour from the site's own family and a loader drawn from its mark |
 | [Connected choreography and resilient walkthrough](cases/19-connected-choreography/input.md) | Preserve distinct section motion while checking continuity, readable proof, input ownership and whole-journey recovery |
+| [Structure and reuse](cases/20-structure-and-reuse/input.md) | Reuse and extend existing components, file parts by who uses them and split oversized files without changing the accepted look |
 
 The subject-led build case also requires the new motion minimum.
 Cases 16 to 18 cover the performance, fit, phone, colour and loader gates added to the skill on 8 October 2026; they were written as editorial regression checks and have not been run by an independent agent.
 Case 19 is also an editorial regression scenario, not an executed behavioral or browser test; its expected findings are a grading rubric, not evidence of a pass.
+Case 20 covers the code structure and reuse rules added on 15 October 2026, and is likewise an editorial scenario that has not been run.
 See [motion revision validation](motion-validation.md) for executed checks and untested scope.
 
 ## Run a case

@@ -6,6 +6,7 @@ description: >
   execution.
   Use for new pages, visual polish, template adaptation, components, phone
   layouts, loading states, colour and design reviews.
+  Also sets how interface code is structured and how components are reused.
   Treats idle CPU, dropped frames on a throttled phone and fit at every width
   as design gates.
   Preserves accepted work, measures before and after, and checks the rendered
@@ -56,6 +57,7 @@ Read [award research](references/award-research.md) when selecting a direction o
 Use [worked examples](references/worked-examples.md) to distinguish a substantive correction from a cosmetic one.
 Every mode ends with the applicable [self-check](references/quality-review.md#before-showing-the-candidate) and the gates in this file.
 Use [stack-specific fixes](references/fixes-by-stack.md) for catalog findings.
+Whenever a Build or Refine adds, extracts or moves interface code, read [code structure and reuse](references/code-structure.md).
 
 ## Non-negotiable constraints
 
@@ -74,6 +76,9 @@ Use [stack-specific fixes](references/fixes-by-stack.md) for catalog findings.
   Improve their proportions, hierarchy and states without turning actions into bare text.
   A status such as a stamp or a tag must not read as a control.
   Use layout-matched skeletons for content loading and preserve meaningful failure and recovery states.
+- Reuse before you write, and keep interface code structured.
+  Search the shared `ui/` and `features/` folders and the showcase page before making a component, and extend an existing one with a variant instead of copying it.
+  File each part by who uses it and keep files under about 300 lines, following [code structure and reuse](references/code-structure.md).
 - Match layout to the job.
   Persuasion needs an argument and proof; reference needs retrieval; an application needs visible state and an obvious next action.
 - The work must prove something.

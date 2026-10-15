@@ -99,6 +99,7 @@ Each stage has an output; the output is the evidence that the stage ran.
 7. **Components.**
    Build from brand evidence, a small visual grammar, an explicit state contract, and a motion contract, then apply the per-component rules.
    Method and rules: `references/component-rules.md`.
+   File and reuse components by the rules in `design-review`'s [code structure and reuse](../design-review/references/code-structure.md).
 8. **Build.**
    Build in semantic reading order with real content.
    Prototype the least certain section boundary together with its neighbours before polishing anything else.
