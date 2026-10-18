@@ -49,6 +49,7 @@ For Build, read [the build playbook](references/build-playbook.md), [typography]
 For every web Build, read [motion](references/motion.md), including its signature and minimum-motion requirements.
 Read it in Refine or Audit when judging or changing animation or transitions.
 Use [motion recipes](references/motion-recipes.md) for GSAP, Lenis, kinetic type, hover and route implementation, and [WebGL craft](references/webgl.md) for Three.js, React Three Fiber, shaders and rendering budgets.
+When a Build models a 3D object, follow the [3D craft process](references/webgl.md#build-a-3d-object-to-a-finished-standard) before modelling.
 Read [motion research](references/motion-research.md) when choosing a mechanism from award winners or explaining its provenance.
 For Refine, load the relevant craft reference and the preservation rules in the playbook.
 For connected section choreography or product walkthroughs, also read the playbook's [whole-page composition](references/build-playbook.md#compose-the-argument) and motion's [section relationships](references/motion.md#give-sections-different-jobs).
