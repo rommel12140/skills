@@ -26,11 +26,15 @@ They generalize recurring failure patterns without reproducing private projects 
 | [Flat palette and stock loader](cases/18-flat-palette-and-stock-loader/input.md) | Colour from the site's own family and a loader drawn from its mark |
 | [Connected choreography and resilient walkthrough](cases/19-connected-choreography/input.md) | Preserve distinct section motion while checking continuity, readable proof, input ownership and whole-journey recovery |
 | [Structure and reuse](cases/20-structure-and-reuse/input.md) | Reuse and extend existing components, file parts by who uses them and split oversized files without changing the accepted look |
+| [Paired corrections](cases/21-paired-corrections/input.md) | Make a requested improvement visible without adding elements, demote an action without hiding it, correct intensity in steps and set spacing by role |
+| [Family, geometry and focal object](cases/22-family-geometry-and-focal-object/input.md) | Extend a family without copying it, give a set one geometry and keep a focal object's relation to the type after a resize |
+| [Images, boundaries and edge bars](cases/23-images-boundaries-and-edge-bars/input.md) | Check images across a set, mark section boundaries, apply `K4` beyond cards and hold `M3` under a passing request |
 
 The subject-led build case also requires the new motion minimum.
 Cases 16 to 18 cover the performance, fit, phone, colour and loader gates added to the skill on 8 October 2026; they were written as editorial regression checks and have not been run by an independent agent.
 Case 19 is also an editorial regression scenario, not an executed behavioral or browser test; its expected findings are a grading rubric, not evidence of a pass.
 Case 20 covers the code structure and reuse rules added on 15 October 2026, and is likewise an editorial scenario that has not been run.
+Cases 21 to 23 cover the paired design rules added on 18 October 2026, each of which names a failure and its opposite; they are editorial scenarios that have not been run.
 See [motion revision validation](motion-validation.md) for executed checks and untested scope.
 
 ## Run a case

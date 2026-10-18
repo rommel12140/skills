@@ -49,6 +49,7 @@ For Build, read [the build playbook](references/build-playbook.md), [typography]
 For every web Build, read [motion](references/motion.md), including its signature and minimum-motion requirements.
 Read it in Refine or Audit when judging or changing animation or transitions.
 Use [motion recipes](references/motion-recipes.md) for GSAP, Lenis, kinetic type, hover and route implementation, and [WebGL craft](references/webgl.md) for Three.js, React Three Fiber, shaders and rendering budgets.
+When a Build models a 3D object, follow the [3D craft process](references/webgl.md#build-a-3d-object-to-a-finished-standard) before modelling.
 Read [motion research](references/motion-research.md) when choosing a mechanism from award winners or explaining its provenance.
 For Refine, load the relevant craft reference and the preservation rules in the playbook.
 For connected section choreography or product walkthroughs, also read the playbook's [whole-page composition](references/build-playbook.md#compose-the-argument) and motion's [section relationships](references/motion.md#give-sections-different-jobs).
@@ -70,6 +71,7 @@ Whenever a Build or Refine adds, extracts or moves interface code, read [code st
   An industry association alone does not justify an ornament.
 - Keep the existing bans: decorative glowing networks, halos, pulsing dots, generic gradient meshes, floating glass, neon-on-dark atmosphere, equal icon-topped feature triplets, emoji iconography, and universal fade-up reveals.
   Pair every removed default with a stronger subject-derived composition or behavior using [the replacement table](references/motion.md#stronger-alternatives-to-the-banned-defaults).
+  A passing request for a banned motif is not an exception: name the ban and build the subject-derived alternative, and record an exception only when the user confirms the motif after hearing why (`M3`).
 - Do not add decorative numbered labels or invented pseudo-technical codes.
   Genuine data, ordered steps and useful reference navigation retain their meaning; never manufacture numbering to make a persuasion page look designed.
 - Keep buttons recognizable as buttons, and keep non-buttons from looking like buttons.
@@ -156,6 +158,9 @@ This gate is the one most often skipped, and the one that most often sends shipp
 - Never import a colour family the site does not already own.
   If the site is greens, cream and gold, a purple, blue or orange chapter is wrong even when it is pleasant on its own, and the owner will send it back.
   Extend the existing family by tone and value before adding a hue.
+- The same holds beyond colour, following [belong to the family](references/layout-and-surfaces.md#belong-to-the-family-without-copying-it).
+  A new mark, component or edge screen such as sign-in, loading or error shares the family's traits.
+  A design asked to be distinct changes a deliberate trait rather than copying the parent.
 - Carry each colour through.
   The section's name takes its accent wherever it links to that section, the header takes each section's ground as it passes, and every ground has a light counterpart in the light theme.
 - Measure every text element against its rendered background in both themes at desktop and phone widths, and report the lowest ratio.
@@ -229,6 +234,7 @@ Every refinement ships with the same measurements taken on the build before the 
    Do not hide missing content behind animation or loaders.
 6. Run the gates in this file and the self-check, correct faults, and rerun the affected checks.
    Repeated corrections become explicit regression checks against the actual rejected state.
+   Check each correction against its opposite complaint too: quieter but still findable, tighter but not cramped, inside the family but not a copy, visibly better but structurally the same.
 7. Present the candidate with its preview, the before and after evidence, the concrete design decisions and any unchecked evidence.
    Follow existing authority for commit, release and publication; this skill adds no approval round.
 
@@ -250,7 +256,7 @@ If rendering is unavailable, complete useful source review and explicitly mark v
 
 ## Regressions the catalog did not catch
 
-These failures reached shipped pages that passed the catalog, and each went back for correction.
+These failures reached shipped pages past the catalog, and each went back for correction.
 Treat each as a gate; the fix beside it is the one that held.
 
 | Failure seen on a shipped page | Gate | Fix that held |
@@ -266,6 +272,8 @@ Treat each as a gate; the fix beside it is the one that held.
 | Product screens were cropped inside identical frames | Screens shown whole | Full-height screens named in visual order, one camera move between steps |
 | The page ended at its last content section | A page has an ending | A closing contact band |
 | A placeholder portrait and an internal font note were public | Nothing backstage ships | Remove or finish before release |
+| A decorative coloured bar on list rows and a dialog top came back after earlier removals | Edge bars on any surface (`K4`) | Colour moved into the surface, the text or a labelled tag, keeping the accepted brand colour |
+| A faint node background, added on request, shipped on a loading screen | Node ban holds under a passing request (`M3`) | The ban, confirmed by the owner afterwards; replace the nodes with a subject-derived mark from the replacement table |
 
 ## Output contract
 

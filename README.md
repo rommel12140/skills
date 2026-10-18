@@ -18,6 +18,7 @@ Motion references cover GSAP, Lenis, kinetic type, page transitions, Three.js, R
 Persuasion pages require a brand-derived signature, an expressive opening or handoff and a later narrative transformation, while operational pages preserve task-focused behavior.
 Performance, fit at every width and after a resize, the phone as its own composition, colour from the site's own family and loaders drawn from its mark are gates, each paired with the fix that held on a shipped page.
 Every refinement ships with before and after measurements and a running preview beside the current site.
+Corrections that tend to swing between opposites, such as too loud and too subtle or off-family and copied, are written as paired rules that name both failures.
 Refinement preserves accepted work, while reviews return concrete findings and stack-appropriate fixes.
 It also owns the rules for interface code: reuse an existing component before writing a new one, file each part by the screens that use it, and keep files small.
 Rendered checks use `chrome-devtools-axi` when available; source-only work leaves visual and motion judgments explicitly unchecked.

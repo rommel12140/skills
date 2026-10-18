@@ -21,6 +21,70 @@ Prototype grey geometry and real HTML together.
 Match perspective, crop, light direction, object scale and reading space before adding surface effects.
 A rotating stock torus with no relationship to the brand is a failed concept even at 60fps.
 
+## Build a 3D object to a finished standard
+
+Use this process for any modelled object that carries the page: a product, a character, a plant, a tool or a mark given depth.
+A scene can be smooth, well lit and cheap and still fail, because the object itself reads as unfinished.
+Judge it at its real size in the page, not by the toolchain or the polygon count.
+
+### What usually feels missing
+
+| What the reviewer sees | What is missing | What to do |
+| --- | --- | --- |
+| A flat picture, or a sheet that looks coloured in | Real volume | Build each part with thickness and a shaped cross-section; colour and shading cannot supply form |
+| Smooth, plastic or illustrated surfaces | Natural variation and material response | Vary repeated parts one by one, take lighting out of the colour maps, and add normal detail, roughness, baked occlusion and restrained highlights |
+| A realism pass that looks unchanged | A change at the layer that failed | Rebuild the geometry when the form is wrong rather than adjusting the light, and show the result at the same pose |
+| Proportions that look off where parts meet | Measured anatomy | Take proportions and joints from references, and let each part grow out of the part that carries it |
+| Angles where it stops reading as the object | Poses that read | Check the whole turn, and rest only in poses that read as the subject |
+| An object that floats, crowds or covers the text | A relation to the composition | State the relation and check it at every width, as [layout and surfaces](layout-and-surfaces.md#establish-a-composition) requires |
+| Motion that jumps or snaps | Continuous movement | Travel on an eased path that builds up, arcs and settles, at a steady on-screen speed |
+| Heat, lag or stutter on a weaker machine | A budget | Draw nothing at rest, spend detail where it is visible, and show a still where graphics run in software |
+| A generic loading state | Continuity with the object | Draw the loader from the object's own silhouette |
+
+A deliberately stylized object, such as a flat-shaded or low-poly mark, is exempt from the realism rows but not from proportion, pose, composition, motion or cost; record the stylization as the decision.
+
+### Steps
+
+1. Study references before modelling.
+   Collect close photographs of the subject or the real product, and note what each one informs: proportion, joints, surface or sheen.
+   Use references to judge the model, not as embedded assets, unless their rights are clear.
+   If the current tools cannot reach the bar, name the authoring tool that can and why, instead of spending another round on changes nobody can see.
+2. Block the form in grey at its real display size, with the real type and the page's light.
+   Settle silhouette, proportion, pose and the relation to the type at 1280, 1440 and 390 before any surface work.
+3. Build the structure.
+   Make each part closed, with thickness and a cross-section that follows the subject, and measure every joint against the references.
+   Vary repeated parts one by one.
+   Generate or export the geometry reproducibly, so it can be rebuilt and checked.
+4. Author the materials.
+   Remove painted light from the colour maps so the scene's light does the shading, keep fine detail in normal maps, and give each surface its own colour and roughness.
+   Bake occlusion and fine detail into the maps.
+   An offline tool such as Blender run headless is a fine authoring step, but never a runtime or build dependency.
+   Add specular response and light transmission only as far as the subject shows them.
+5. Fit the budget.
+   Spend geometry where it is visible: dense on large curved parts, sparse on small ones.
+   Pack and compress the model, ship smaller maps to phones, keep draw calls few, and regenerate delivery files in the production build so stale assets cannot ship.
+6. Wire the delivery.
+   Render on demand with [the starter below](#threejs-starter-render-only-when-the-scene-changes), and lower render resolution only under measured GPU pressure.
+   Treat a software renderer as missing WebGL: request `failIfMajorPerformanceCaveat` and check the reported renderer name, such as SwiftShader or llvmpipe, then show the still.
+   Capture posters and stills from the renderer itself at the poses the page uses, and recapture them after any change to geometry, materials or light.
+   Fade a moving object as one layer, drawn opaque and faded as a whole, so its parts never show through each other.
+   Draw the loading indicator from the object's silhouette, as [the loader gate](../SKILL.md#no-generic-loaders-progress-bars-or-decorative-slop) requires.
+7. Review against matched captures.
+   Compare candidate and accepted version at the same viewport, pose, light and progress: front, back, three-quarter and edge-on, plus a turning sequence forward and back.
+   Inspect close-ups of the joints and the finest detail, then the object at its real size in the page, in both themes and on a phone.
+   Compare pixels with and without the object inside each line of nearby text, and measure the contrast of any text it passes behind.
+   Record idle draws, a throttled-phone trace, transfer bytes, GPU memory, and the software and no-WebGL paths; extra offscreen draws can stand in for a weaker GPU.
+   Present one result for visual acceptance and describe it honestly: an authored model is not a scan, and passing tests are not acceptance.
+
+When a round is rejected, reproduce the reviewer's view first, find the row in the table that matches, and fix that layer.
+
+### Worked example
+
+One hero object, a fern frond turned by scroll, went through ten rounds between 22 September and 10 October 2026.
+The early rounds added colour and shading to a flat textured sheet, and were rejected as coloured in, bulky at the joins, or unchanged.
+It was accepted after a rebuild with closed, individually varied parts, a real supporting stem, separate front and back materials and baked occlusion.
+Later rounds cut its geometry by more than half by moving fine detail into baked maps, set it against the type, stopped its idle drawing, drew the loader from its silhouette, replaced an edge-on pose that did not read, and showed a still under software graphics.
+
 ## Asset pipeline and scene ownership
 
 Use GLB/glTF for interchange, with meaningful node names, applied transforms, correct pivots and documented units.

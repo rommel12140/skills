@@ -33,7 +33,7 @@ Do not create a pseudo-precise composite score.
 | Page argument | A clear task, relevant proof and a next step | Sections exist because a template expected them |
 | Typography | Distinct roles, expressive but readable display, precise spacing | A new font sits on an otherwise unchanged generic layout |
 | Composition | Dominance, balanced density, common edges and purposeful rhythm | Everything has equal weight, or whitespace conceals missing proof |
-| Imagery | Real subject, strong crop, consistent treatment, legible overlays | Missing, dirty, unrelated or poorly framed imagery |
+| Imagery | Real subject, sharp at display size, strong crop, consistent treatment, legible overlays | Missing, dirty, blurry, repeated, visibly generated, unrelated or poorly framed imagery |
 | Surfaces | Clear layers and controls, deliberate states and restrained separators | Bare-text actions, excessive rules, arbitrary stripes or oversized panels |
 | Motion | A brand-derived signature, composed opening and later transformation, deliberate section levels, coherent intermediate states | Flat persuasion page, token hovers posing as a signature, repeated reveals, delayed context, dead controls or jumpy reversal |
 | Spatial and material craft | Depth, lighting, image treatment or kinetic type makes the subject tangible, with a strong alternate version | Arbitrary rotating object, generic shader wallpaper, absent dominant visual after evidence removal, or discarded mobile art direction |
@@ -44,6 +44,11 @@ Do not create a pseudo-precise composite score.
 For each weak area, explain the visible cause and a concrete correction.
 Name strengths specifically so a refinement preserves them.
 Do not call a site award-level solely because it is clean, unusual, animated or technically valid.
+
+Correct intensity in steps, because an overcorrection usually brings the opposite complaint.
+When an element is too loud or attention-grabbing, lower one property at a time (size, saturation, contrast or weight) and stop at the first step where it no longer competes but still reads at a glance.
+When it is bland or underwhelming, add character through type, proportion, material or motion drawn from the subject, not by adding elements.
+Record which property moved, and compare the new step beside the previous one before showing it.
 
 ## Before showing the candidate
 
@@ -59,6 +64,7 @@ When an external limitation prevents a check, mark it unchecked and describe the
 - Real content replaces draft material; numbers and claims have sources.
 - Template adaptation retains the authorized structure, density and interaction behavior.
 - A previous rejected variation has not survived in an untested route, breakpoint or state.
+- A requested improvement to an accepted element is visible beside the current version at the same size, and adds no element the request did not name.
 - When changing shared CSS, tokens or components, identify sibling routes that consume them and compare their affected states with the accepted baseline; a clean capture of the edited route alone cannot prove a local change.
 
 ### Pixels and composition
@@ -69,7 +75,13 @@ When an external limitation prevents a check, mark it unchecked and describe the
 - Review the opening, middle and ending as a connected composition, then inspect their handoffs in motion. Preserve distinct section layouts and grounds while checking recurring identity, spatial continuity, layer order and readable pacing.
 - For a walkthrough, verify whole-screen context and readable detail together, real task order, and directly selectable steps; a tiny whole-screen thumbnail alone does not make the product inspectable.
 - Inspect image-heading alignment, column boundaries, consistent control baselines and optical gaps.
-- Check actual image crops, sharpness and color relationships at display size.
+- Check that siblings in a set share height, corner and inset without cut text, unless their variation is deliberate.
+- Check that gaps between sections are clearly larger than gaps inside them, so no section looks stuck to the one before it.
+- Check that a focal object set against type keeps its stated relation to the type at every width and after a resize.
+- Check every image at display size for sharpness, cleanliness, crop, subject and color relationships; a soft, dirty or awkwardly cut image fails even when its subject is right.
+- Across a set of cards, articles or products, no image repeats, and no generated image shows generation artefacts or stands in for a real photograph.
+- Replace a weak image with a stronger real one or an equally strong honest treatment; when removing it is authorized instead, recompose the layout so no empty slot or broken section remains.
+  See [the build playbook](build-playbook.md#understand-the-job-before-the-composition).
 - Check long headings, unusual names, multiline descriptions and realistic CMS content.
 - Inspect cold load, settled load and font failure separately.
 - Confirm no accidental overflow, zero-sized images, clipped glyphs, orphaned labels or overlapping borders.

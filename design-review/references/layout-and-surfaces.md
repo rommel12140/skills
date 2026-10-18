@@ -19,6 +19,9 @@ Do not force those values into a dense application or an existing site that uses
 Use a small spacing scale, such as 4, 8, 12, 16, 24, 32, 48, 64 and 96 px.
 A relationship matters more than membership in the scale: related text sits closer together than unrelated groups.
 Try 64 to 120 px between major desktop sections and 40 to 72 px on phones, then tune by density and visual continuity.
+Whatever the values, a section boundary must read as one.
+Make the gap between sections clearly larger than any gap inside them, or mark the boundary with a change of ground or a rule that earns its place, so no section looks stuck to the one before it.
+Open each section with what it is, through a heading, a named object or a line of context, before its images and detail, unless the image alone makes the subject plain.
 Long empty scroll is not evidence of refinement.
 
 Align repeated headings, imagery, metadata and actions to common edges.
@@ -26,6 +29,17 @@ Measure the actual image boundary, not just its wrapper, including padding inher
 If an image is full bleed, make that deliberate; otherwise align it to the text's column.
 Check left and right edges at intermediate widths as well as desktop and phone.
 Avoid percentage-minus-gutter widths whose parent can collapse to zero.
+
+Siblings in one set share one geometry, unless deliberate variation is the composition, as in a planned editorial or masonry grid.
+Cards in a row, tabs in a bar and tiles in a grid share height, corner, inset and baseline, with the height set by the tallest real content.
+An accidental difference in any of these reads as careless.
+The opposite failure forces sameness by cutting text or by stretching every sibling with empty space.
+When one item is far taller than the rest, recompose the set, for example as a list or with unequal spans, instead of clipping it or padding the others.
+
+A focal object placed against type keeps a stated relation to it.
+Write the relation down, for example centred between two words, set on a fixed angle, or a fixed clearance from every glyph, and check it at every capture width and after a resize.
+An object with no stated relation floats and looks pasted on.
+One that crowds the type, overlaps letters or slides off its axis at another width breaks the relation from the other side.
 
 At 1280x800, keep the essential hero claim and primary action visible in the intended opening composition.
 Treat this as a regression viewport, not a claim that all visitors use that size.
@@ -50,6 +64,13 @@ It does not remove the user's ability to recognize a control, hide important sta
 A sparse page may need stronger proof, a better image or more useful grouping.
 A busy page may need fewer labels, better priorities or secondary detail moved into a relevant disclosure.
 Diagnose which problem is present before removing or adding content.
+
+Set spacing by the element's role, and check it in both directions.
+Records, settings and profiles use tight, consistent row spacing and compact values, so the facts a person compares stay in view together.
+Loose spacing there pushes needed facts off the screen.
+Showcase cards, portfolio items and media panels use generous inner padding, with text on the same inset as the image so both read as one object.
+Cramped padding there reads cheap.
+Before showing, compare an element's inner padding with its siblings and with elements of the same role elsewhere in the product.
 
 ## Color as a controlled system
 
@@ -99,12 +120,30 @@ Use a vector or adequate raster resolution, natural proportions, deliberate clea
 A large raster logo scaled down in CSS can still look soft; a source with excessive transparent padding can misalign the apparent mark.
 Do not redraw an identity without authorization.
 
+## Belong to the family without copying it
+
+A new screen, page, mark or component joins an existing family.
+It shares the family's palette, stroke, corner, type weight and spacing scale, and uses the product's own tokens and components.
+Edge screens drift first: give sign-in, consent, loading, error, empty and exported views the same tokens and components as the main screens, not a one-off look.
+The opposite failure is a near-copy.
+When the brief asks for a new mark or a distinct design, a version that repeats the parent brand or the existing piece with a small edit has not answered it.
+Keep the family traits and change a deliberate trait you can name, such as the letterform, the silhouette or the composition, so the result reads as a sibling rather than a duplicate.
+This does not apply when the job is the same: then reuse the existing component, following [code structure and reuse](code-structure.md).
+
 ## Buttons and controls
 
 A crafted control has a consistent silhouette, optical alignment, understandable label and complete states.
 Use the project's solid, outline or other recognizable button treatment for actions.
 Use links for navigation where appropriate; an anchor serving as a primary CTA can still look like a button.
 A request for smaller or cleaner buttons means refining size and hierarchy, not deleting their affordance.
+
+Rank actions by how often the person needs them, and give emphasis in that order.
+The main action gets the strongest treatment and the position the project's convention gives it.
+A secondary or destructive action drops one step, for example from a solid fill to an outline, and stays labelled, recognizable and in a predictable place.
+Keep a destructive action apart from the main one so it is not pressed by mistake; when deleting is the task itself, as in a delete confirmation, it is the main action.
+The two failures mirror each other: a secondary action as loud as the main one, and an action demoted until nobody can find it.
+Quiet is not hidden, so inspect the demoted control at real size and in both themes before showing it.
+Supporting facts and reference links follow the same ranking: move them somewhere quieter, not out of reach.
 
 Useful starting dimensions are 40 to 48 px control height with 14 to 20 px horizontal padding.
 Dense desktop tools can use smaller visible controls with adequate hit area and spacing.

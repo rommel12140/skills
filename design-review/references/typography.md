@@ -109,6 +109,10 @@ If a particular ligature is unreadable, test that feature or a different cut bef
 Do not arbitrarily disable all font features.
 Align text optically with adjacent imagery and controls; a curved letter may need a small optical correction that the CSS box does not reveal.
 For custom wordmarks, compare apparent gaps and corner geometry, not just equal bounding-box distances.
+Letters in one mark share corner treatment, stroke weight and apparent width unless a difference is the idea.
+Equalize what the eye sees rather than the boxes: a round letter usually needs a little extra width and overshoot to look as wide and tall as a square one.
+Check every pair at display size and at the smallest size the mark appears.
+An accidental difference reads as unfinished, and equal boxes that look uneven are the opposite failure.
 Keep wordmark edits within scope.
 
 Prefer intentional phrase breaks over accidental one-word final lines.
