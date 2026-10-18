@@ -23,77 +23,67 @@ A rotating stock torus with no relationship to the brand is a failed concept eve
 
 ## Build a 3D object to a finished standard
 
-Use this process whenever the signature is a modelled object: a product, a plant, a tool or a mark given depth.
-A scene can be smooth, well lit and cheap and still fail because the object reads as a flat illustration.
-The bar is what a reviewer sees at the object's real size in the page, not the toolchain or the polygon count.
-A deliberately stylized object, such as a flat-shaded or low-poly mark, keeps the same bar for silhouette, proportion, junctions, pose, composition and cost, and records its stylization as the decision.
+Use this process for any modelled object that carries the page: a product, a character, a plant, a tool or a mark given depth.
+A scene can be smooth, well lit and cheap and still fail, because the object itself reads as unfinished.
+Judge it at its real size in the page, not by the toolchain or the polygon count.
 
-### The quality bar
+### What usually feels missing
 
-- The silhouette comes from the real subject or the approved source art, and stays recognizable at small and full display size.
-- Every structural part has volume.
-  Supports have a shaped cross-section that tapers along a traced axis, thin parts are closed shapes with edge thickness, and no part relies on colour alone to look solid.
-- Repeated parts vary one by one, in cup, curl, twist or fold, so each catches the light differently.
-- Parts grow out of their supports: junction proportions match the subject, and material blends along the real form rather than along a painted mask.
-- Each face and material has its own pigment and roughness, fine detail comes from a normal map, contact shading is baked, and highlights stay restrained.
-  Plastic gloss, noisy weathering and lighting painted into the pigment fail.
-- The object holds up through its whole motion, front, back, three-quarter, edge-on and the frames between, and it rests only in poses that read as the subject.
-- It keeps a stated relation to the type at every width, as [layout and surfaces](layout-and-surfaces.md#establish-a-composition) requires.
-- It draws nothing at rest, meets the [budget](#performance-and-accessibility-budget), and has an equally composed still for reduced motion, missing WebGL and software rendering.
-- The report names what the object is: an authored interpretation is never presented as a scan or a photograph.
+| What the reviewer sees | What is missing | What to do |
+| --- | --- | --- |
+| A flat picture, or a sheet that looks coloured in | Real volume | Build each part with thickness and a shaped cross-section; colour and shading cannot supply form |
+| Smooth, plastic or illustrated surfaces | Natural variation and material response | Vary repeated parts one by one, take lighting out of the colour maps, and add normal detail, roughness, baked occlusion and restrained highlights |
+| A realism pass that looks unchanged | A change at the layer that failed | Rebuild the geometry when the form is wrong rather than adjusting the light, and show the result at the same pose |
+| Proportions that look off where parts meet | Measured anatomy | Take proportions and joints from references, and let each part grow out of the part that carries it |
+| Angles where it stops reading as the object | Poses that read | Check the whole turn, and rest only in poses that read as the subject |
+| An object that floats, crowds or covers the text | A relation to the composition | State the relation and check it at every width, as [layout and surfaces](layout-and-surfaces.md#establish-a-composition) requires |
+| Motion that jumps or snaps | Continuous movement | Travel on an eased path that builds up, arcs and settles, at a steady on-screen speed |
+| Heat, lag or stutter on a weaker machine | A budget | Draw nothing at rest, spend detail where it is visible, and show a still where graphics run in software |
+| A generic loading state | Continuity with the object | Draw the loader from the object's own silhouette |
+
+A deliberately stylized object, such as a flat-shaded or low-poly mark, is exempt from the realism rows but not from proportion, pose, composition, motion or cost; record the stylization as the decision.
 
 ### Steps
 
 1. Study references before modelling.
-   Collect close photographs of the real subject from a reliable source, and note what each one informs, such as vein contrast, sheen or fibre direction.
+   Collect close photographs of the subject or the real product, and note what each one informs: proportion, joints, surface or sheen.
    Use references to judge the model, not as embedded assets, unless their rights are clear.
+   If the current tools cannot reach the bar, name the authoring tool that can and why, instead of spending another round on changes nobody can see.
 2. Block the form in grey at its real display size, with the real type and the page's light.
    Settle silhouette, proportion, pose and the relation to the type at 1280, 1440 and 390 before any surface work.
 3. Build the structure.
-   Trace the outline and main axis from the source, give each support a shaped cross-section, and build each repeated part as its own closed piece with a root that meets its support.
-   Add per-part variation and edge thickness.
-   Generate the geometry with a deterministic script so it can be rebuilt and regression-tested.
+   Make each part closed, with thickness and a cross-section that follows the subject, and measure every joint against the references.
+   Vary repeated parts one by one.
+   Generate or export the geometry reproducibly, so it can be rebuilt and checked.
 4. Author the materials.
-   Remove painted light from the pigment maps so the scene's light does the shading, keep fine detail in a normal map, and give each face its own pigment and roughness.
-   Bake contact occlusion, pigment variation and fibres into the maps.
+   Remove painted light from the colour maps so the scene's light does the shading, keep fine detail in normal maps, and give each surface its own colour and roughness.
+   Bake occlusion and fine detail into the maps.
    An offline tool such as Blender run headless is a fine authoring step, but never a runtime or build dependency.
    Add specular response and light transmission only as far as the subject shows them.
 5. Fit the budget.
-   Sample geometry by visible size: dense along long parts, sparse on tiny ones.
-   Pack and compress the model, ship smaller maps to phones, keep one draw call where the subject allows, and regenerate delivery files in the production build so stale assets cannot ship.
+   Spend geometry where it is visible: dense on large curved parts, sparse on small ones.
+   Pack and compress the model, ship smaller maps to phones, keep draw calls few, and regenerate delivery files in the production build so stale assets cannot ship.
 6. Wire the delivery.
    Render on demand with [the starter below](#threejs-starter-render-only-when-the-scene-changes), and lower render resolution only under measured GPU pressure.
    Treat a software renderer as missing WebGL: request `failIfMajorPerformanceCaveat` and check the reported renderer name, such as SwiftShader or llvmpipe, then show the still.
    Capture posters and stills from the renderer itself at the poses the page uses, and recapture them after any change to geometry, materials or light.
-   Fade a moving object as one layer, drawn opaque and faded as a whole, so its folded parts never show through each other.
-   Draw the loading indicator from the same silhouette, as [the loader gate](../SKILL.md#no-generic-loaders-progress-bars-or-decorative-slop) requires.
+   Fade a moving object as one layer, drawn opaque and faded as a whole, so its parts never show through each other.
+   Draw the loading indicator from the object's silhouette, as [the loader gate](../SKILL.md#no-generic-loaders-progress-bars-or-decorative-slop) requires.
 7. Review against matched captures.
    Compare candidate and accepted version at the same viewport, pose, light and progress: front, back, three-quarter and edge-on, plus a turning sequence forward and back.
-   Inspect close-ups at the base, middle and tip, then the object at its real size in the page, in both themes and on a phone.
+   Inspect close-ups of the joints and the finest detail, then the object at its real size in the page, in both themes and on a phone.
    Compare pixels with and without the object inside each line of nearby text, and measure the contrast of any text it passes behind.
    Record idle draws, a throttled-phone trace, transfer bytes, GPU memory, and the software and no-WebGL paths; extra offscreen draws can stand in for a weaker GPU.
-   Present one result for visual acceptance, because passing tests do not establish it.
+   Present one result for visual acceptance and describe it honestly: an authored model is not a scan, and passing tests are not acceptance.
 
-When a round is rejected, reproduce the reviewer's pose and size first, then name the layer that failed: silhouette, structure, junction, surface, pose, composition or cost.
-Fix that layer.
-A shading change the reviewer cannot see is a failed round, and when the form is wrong, rebuild the geometry rather than adjusting the light.
+When a round is rejected, reproduce the reviewer's view first, find the row in the table that matches, and fix that layer.
 
-### Worked example: a botanical hero object
+### Worked example
 
-A fern frond with a green upper face and a pale underside, turned by scroll in a portfolio hero, went through these rounds between 22 September and 10 October 2026.
-
-| Version | What was wrong | What fixed it |
-| --- | --- | --- |
-| Tinted stalk on a flat leaf sheet | The stalk had no depth, and its colour mask missed the real curve, so it looked coloured in | A closed, tapered support following the traced ridge |
-| Leaf bases | The mask left the stalk's shoulders green, so the blades read as joined to each other | Shoulders measured from the gaps between blades, with material blended into each insertion |
-| Thicker stalk | Its diameter came from the broad shoulders, so it looked bulky and the joins flared | A slender profile resampled locally around the axis |
-| Subtle shading pass | The front view looked unchanged | 36 closed blades with their own cup, curl, twist, edge thickness and raised midribs, a 16-sided stalk, separate front and back materials, and baked contact occlusion |
-| First full rebuild | 61,518 vertices, a 1.8 MB model and 1.3 MB of maps | A packed model and lossy maps, then sampling by visible size: 28,808 vertices and about 0.6 MB with maps, with veins, fibres and a grooved stalk moved into the baked maps |
-| Hero placement | It overlapped the name's letters, then slid off the centre | One stated relation, slanting through the centre between the name and the introduction, with a pixel check of each text line |
-| Idle page | 300 draws in five idle seconds | Render on demand: zero draws at rest |
-| Loader | A separate progress line, then a clipping version that cost more main-thread time | The same silhouette filling from base to tip by moving gradient stops only |
-| Edge-on rest pose | It did not read as a leaf | A three-quarter pose |
-| Software graphics | Stutter doubled on a simulated slow laptop without GPU acceleration | A still render when a software renderer is detected |
+One hero object, a fern frond turned by scroll, went through ten rounds between 22 September and 10 October 2026.
+The early rounds added colour and shading to a flat textured sheet, and were rejected as coloured in, bulky at the joins, or unchanged.
+It was accepted after a rebuild with closed, individually varied parts, a real supporting stem, separate front and back materials and baked occlusion.
+Later rounds cut its geometry by more than half by moving fine detail into baked maps, set it against the type, stopped its idle drawing, drew the loader from its silhouette, replaced an edge-on pose that did not read, and showed a still under software graphics.
 
 ## Asset pipeline and scene ownership
 
