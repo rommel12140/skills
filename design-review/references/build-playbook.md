@@ -123,6 +123,10 @@ If a previous variation was rejected, remove its effects before building on the 
 
 Improve craft where scope is tight: optical spacing, text hierarchy, common edges, control proportions, grouping, state feedback and transition continuity.
 Do not satisfy a request for a distinct design by adding a status strip or label while leaving the actual composition untouched.
+The opposite failure is a change so slight that the reviewer cannot see it.
+Aim for visibly better and structurally identical: when asked to improve an accepted element, redraw its existing parts (type, weight, spacing, edge, ground and proportion) and add no element the request did not name.
+Show the candidate beside the current version at the same size and state.
+If the difference has to be pointed out or explained, it is not yet a visible improvement.
 
 ## Adapt an existing template faithfully
 

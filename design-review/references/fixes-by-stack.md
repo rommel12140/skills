@@ -111,12 +111,12 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 - **React/Tailwind**: delete the wrapping div carrying `rounded-lg bg-primary/10 p-3`.
 - **Webflow**: delete the icon wrapper div and place the icon inline, or remove it.
 
-## K4 - Colour-accent border cards
+## K4 - Colour-accent edge bars
 
-- **HTML/CSS**: remove `border-left`, distinguish by surface colour or spacing.
-  If the colour carries status, add a text label.
-- **React/Tailwind**: drop `border-l-4 border-primary`, use a distinct surface token and a status label.
-- **Webflow**: remove the left border on the card class and add a status text element.
+- **HTML/CSS**: remove the accent `border-left`, `border-top` or edge strip from the card, row, panel or dialog, and distinguish by surface colour or spacing.
+  If the colour carries status or brand, add a text label and keep the colour in that label, the text or a tinted surface token.
+- **React/Tailwind**: drop `border-l-4 border-primary` and similar edge utilities, including on list rows and dialog headers; use a distinct surface token and a status label that carries the colour.
+- **Webflow**: remove the edge border on the shared class rather than per instance, and add a status text element or a tinted surface that keeps the colour.
 
 
 ## K5 - Actions lose their button affordance

@@ -152,12 +152,16 @@ Why: it is the stock feature-card ornament.
 Instead: set the icon inline with the text, at text size, or remove it.
 Most of these icons carry no meaning.
 
-### K4 - Colour-accent border cards - P1 - render: no
+### K4 - Colour-accent edge bars - P0 - render: no
 
-Gate: Do cards or callouts carry a coloured left or top border as their only distinguishing mark?
-Why: it substitutes a stripe for a design decision.
+Gate: Does a card, callout, row, list item, panel, dialog or page edge carry a coloured left or top bar as decoration or as its only distinguishing mark?
+Detect: an accent-coloured `border-left` or `border-top`, utilities such as `border-l-4`, an inset edge shadow, or a thin absolutely positioned strip on any of those surfaces.
+Why: it substitutes a stripe for a design decision, and it reads as machine-made wherever it sits, not only on cards.
 Instead: distinguish by surface, spacing, or type.
-If the colour carries status, pair it with a label so it is not the only signal.
+If the colour carries status, pair it with a label so it is not the only signal, and carry the colour in the label, the text or a tinted surface rather than in a stripe.
+Do not strip an accepted brand or status colour along with the bar: move the colour and keep it.
+Exempt: a bar that is a working convention rather than decoration, such as the selected item's indicator in navigation or a tab bar, a focus indicator, a progress or timeline track, or a rule beside quoted text in long-form reading.
+Check: rows, list items, panels and dialog tops as well as cards, in every theme and state.
 
 ### K5 - Actions lose their button affordance - P1 - render: yes
 
@@ -166,6 +170,7 @@ Why: removing the control's shape to make a page minimal makes the task harder t
 Instead: retain the established solid, outline or otherwise clearly button-like treatment; refine size, padding, hierarchy and states.
 Check: default, focus, pressed, disabled and loading, on desktop and phone.
 A real inline navigation link is not a failed button.
+A secondary or destructive action made quieter must still pass this gate: demote it one step, not out of sight; see [buttons and controls](layout-and-surfaces.md#buttons-and-controls).
 
 ### K6 - Content loading has no matching structure - P1 - render: yes
 
@@ -198,6 +203,9 @@ Why: it is generic technology iconography that means nothing about this product.
 Instead: draw the real thing.
 If a system is being shown, draw the system.
 If nothing needs drawing, leave it out.
+A passing request for the motif, such as a faint node background behind a loading screen, is not an accepted exception.
+Name the ban, offer a subject-derived alternative from [the replacement table](motion.md#stronger-alternatives-to-the-banned-defaults), and build that.
+Record an exception only when the user confirms the motif after hearing why it is banned.
 
 ---
 
