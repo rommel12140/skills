@@ -22,6 +22,7 @@ If the existing structure is causing a real problem, name it as a finding and pr
 
 Two components that differ only in a colour, a size or one optional slot are one component with two variants.
 A copied component with a small edit is a defect even when it renders correctly, because the next change lands in one copy and not the other.
+For storage and schema decisions, the same rule applies to database tables and shared stores: see the sibling `data-model` skill.
 
 ## When to extract a component
 
