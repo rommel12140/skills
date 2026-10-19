@@ -1,6 +1,6 @@
 # skills
 
-Four agent skills: one for prose, one for interface work, one for page structure and component systems, one for the daily report.
+Five agent skills: one for prose, one for interface work, one for page structure and component systems, one for database tables and schema changes, one for the daily report.
 The writing skill supports constraints and audits; the design skill supports building, scoped refinement and audits; the build skill wireframes pages and specifies component systems.
 
 ## copy-review
@@ -33,6 +33,16 @@ Every rule is labelled as observed on a winner, stated by the studio that made i
 Its sources were re-checked against award records, studio case studies, live pages and published Carbon, GOV.UK and W3C numbers before it was written; they are cited in `awwwards-build/references/evidence.md`.
 Use it when the deliverable is a page's structure, its sections or a component system; `design-review` covers general builds, refinement and audits, and audits what this skill produces.
 
+## data-model
+
+Decides whether a feature's data needs a new database table, or belongs in an existing table or a shared store.
+It covers SQLite, D1, Postgres and similar relational databases, and runs whenever a task adds or changes tables, schemas or migrations.
+A new feature is not a reason for a new table: a table needs a distinct entity, a different cardinality or lifecycle, different access, retention, encryption or recovery rules, or keys and constraints an existing table cannot hold, and the change names which one.
+Common plumbing such as reviews before saving, background readers, settings and switches, and audit logs exists once and is shared.
+Business records, their history, permissions, proof of external effects and recovery data stay apart from drafts, caches and logs, and no catch-all key-value or JSON table stands in for real constraints.
+Every schema change records its owner, readers and writers, retention, backup and restore, and rollback, and nothing is deleted without a verified backup and the owner's approval.
+It is the storage form of the component reuse rule in `design-review`, and it sets no target table count.
+
 ## eod
 
 Writes the owner's end-of-day report from whatever he dictated, in his format: a dated line, one main-outcome paragraph, then up to four priority bullets in priority order.
@@ -53,6 +63,7 @@ A composite slop number has no reliable predictive value and hides which specifi
 npx skills add rommel12140/skills --skill copy-review -g
 npx skills add rommel12140/skills --skill design-review -g
 npx skills add rommel12140/skills --skill awwwards-build -g
+npx skills add rommel12140/skills --skill data-model -g
 npx skills add rommel12140/skills --skill eod -g
 ```
 
