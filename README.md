@@ -1,6 +1,6 @@
 # skills
 
-Five agent skills: one for prose, one for interface work, one for page structure and component systems, one for database tables and schema changes, one for the daily report.
+Six agent skills: one for prose, one for interface work, one for page structure and component systems, one for database tables and schema changes, one for the daily report, one for unconventional routes in growth work.
 The writing skill supports constraints and audits; the design skill supports building, scoped refinement and audits; the build skill wireframes pages and specifies component systems.
 
 ## copy-review
@@ -51,6 +51,13 @@ What the three do differently is his to vary and is never normalised: the greeti
 The rule that outranks the rest: it assembles and orders, it does not re-word. The roughness in dictated speech is the voice, so a sentence that comes out grammatically better than it went in is a defect.
 Dictation is the primary mode and works with nothing else available. On request it will read the day's commits and merged pull requests to fill gaps, but found work is offered to him rather than written into a bullet, and it never pads to four.
 
+## unconventional-routes
+
+Finds the unconventional route around a blocker in the owner's growth work: a job search, applications, finding clients, testing a market, pricing and sales outreach.
+It lists at least three routes beyond the standard one, ranks them by expected effect and risk, and sorts each as fine, gray but defensible, or over the line.
+The line it never crosses: no false statement to an employer, client or authority, and no real risk to the owner's visa, licence or reputation without the owner's word.
+Gray routes come with the concrete risk, how to keep it small, and the formal route they stand in for, and the owner decides.
+
 ## No score
 
 No skill here reports a score.
@@ -65,6 +72,7 @@ npx skills add rommel12140/skills --skill design-review -g
 npx skills add rommel12140/skills --skill awwwards-build -g
 npx skills add rommel12140/skills --skill data-model -g
 npx skills add rommel12140/skills --skill eod -g
+npx skills add rommel12140/skills --skill unconventional-routes -g
 ```
 
 ## voice.md
