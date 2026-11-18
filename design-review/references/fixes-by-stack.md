@@ -131,6 +131,18 @@ Pasting CSS into a Webflow embed defeats the class system and is not a fix.
 - **React/Tailwind**: build skeletons from the same layout primitives as loaded content, keep stable keys and dimensions, and model loading/empty/error/partial states distinctly.
 - **Webflow**: style loading, empty and error containers through the shared classes; where custom data loading needs script, preserve the native layout and update only the relevant region and status.
 
+## K7 - List rows open only from the title
+
+- **HTML/CSS**: wrap the row in one `<a>` when it holds no other control.
+  When it does, keep the title as the link, give the row `position: relative`, stretch the link with `::after { content: ""; position: absolute; inset: 0; }`, and lift nested controls above it with `position: relative; z-index: 1`.
+  Remove the title underline, set `cursor: pointer` on the row, and style the row from `:hover` and `:focus-within` or `:focus-visible`.
+- **React/Tailwind**: fix the shared row component, not each list: a stretched title link with `after:absolute after:inset-0`, `relative z-10` on nested controls, `no-underline`, and `hover:` and `focus-within:` row states.
+  Never nest a button or link inside the row's `<a>`.
+  A row `onClick` on a `div` also needs `role="link"`, `tabIndex={0}` and an Enter handler, so prefer the stretched link.
+- **Webflow**: make the row a Link Block on the shared class when it has no nested controls.
+  Otherwise add an absolute Link Block filling the row, with an accessible name, and set nested controls to relative with a higher z-index.
+  Set hover and focused states on the row class, and remove the title underline on the class.
+
 ---
 
 ## M1 - transition-all

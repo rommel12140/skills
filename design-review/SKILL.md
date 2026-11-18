@@ -273,6 +273,7 @@ Treat each as a gate; the fix beside it is the one that held.
 | The page ended at its last content section | A page has an ending | A closing contact band |
 | A placeholder portrait and an internal font note were public | Nothing backstage ships | Remove or finish before release |
 | A decorative coloured bar on list rows and a dialog top came back after earlier removals | Edge bars on any surface (`K4`) | Colour moved into the surface, the text or a labelled tag, keeping the accepted brand colour |
+| List rows opened only from an underlined title, with no hover or focus state, on repeated builds | Whole row opens (`K7`) | The row as one hit target with a pointer cursor, plain title text, row hover and focus states, and nested controls that act alone |
 | A faint node background, added on request, shipped on a loading screen | Node ban holds under a passing request (`M3`) | The ban, confirmed by the owner afterwards; replace the nodes with a subject-derived mark from the replacement table |
 
 ## Output contract
