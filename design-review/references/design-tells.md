@@ -180,6 +180,24 @@ Instead: use layout-matched skeletons, a stable page shell, one truthful status,
 Exempt: a brief session check before the content layout is known may use an appropriate branded status animation without a fabricated delay.
 Check: fast, slow, failed and partial responses, plus reduced motion.
 
+### K7 - List rows open only from the title - P1 - render: yes
+
+Gate: Does a list row that opens a record open only from part of the row, show its title as an underlined link, or lack a visible hover or keyboard focus state?
+Detect: an `<a>` wrapping only the title text, `text-decoration: underline` on row titles, no `cursor: pointer` on the row, a `:hover` or `:focus-visible` rule missing for the row, or a row `onclick` with no `tabindex` and no Enter handling.
+Why: a row reads as one item, so a visitor clicks anywhere on it and expects it to open.
+An underlined title inside a row reads as a web link from another era, and this failure came back on repeated builds.
+Instead: make the whole row the hit target, with a pointer cursor across it.
+Use one link or button wrapping the row, a title link stretched over the row, or a row handler that is in the tab order and opens on Enter.
+Set the title as plain row text, with no underline.
+Give the row a visible hover state and a visible focus state on the whole row.
+Keep nested controls in the row, such as a checkbox, a menu or a secondary link, working on their own without also opening the row.
+Exempt: rows that open nothing, and grids whose cells are separate controls, such as an editable table.
+Check: on the rendered page, click a non-title part of a row, such as its padding, date or status, and confirm the row opens.
+Hover a row and confirm the cursor and the row change.
+Tab to a row, confirm the focus state shows on the row, and press Enter to open it.
+Click each nested control and confirm only that control acts and the row does not open.
+Record what opened, or the address change, for each step.
+
 ---
 
 ## M - Motion
